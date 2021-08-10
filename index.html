@@ -6,9 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- CSS -->
     <link href="index.css" rel="stylesheet">
 
-    <title>Editor de memes</title>
+    <title>Meme editor</title>
+
+    <!-- FUENTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 
 </head>
@@ -17,17 +23,72 @@
 
 <body>
 
+    <!-- ASIDE IMAGE-->
 
+    <aside>
+        <div class="div-image">
+            <form class="image-form">
+                    <h2>IMAGE</h2>
 
+                    <!-- FORM: URL -->
 
+                    <h3>URL</h3>
+                        <label class="label-url" for="URL"></label>
+                            <input class="url" id="url" type="url">
 
+                    <!-- FORM: COLOR AND SELECT -->        
 
+                    <h3>BACKGROUND</h3>           
+                        <label class="color-and-select" for="color">
+                                <input class ="color" id="color" type="color" value="#ffffff"> 
+                                    <select class="select-background" name="select">
+                                            <option value="ninguno" selected>Ninguno</option>
+                                            <option value="aclarar">Aclarar</option>
+                                            <option value="oscurecer">Oscurecer</option>
+                                            <option value="diferencia">Diferencia</option>
+                                            <option value="luminosidad">Luminosidad</option>
+                                            <option value="multiplicar">Multiplicar</option>
+                                    </select>
+                        </label>
 
+                        <!-- FORM: FILTER RANGE -->
+               
+                    <h3>FILTER</h3>
 
+                        <label for="brightness">BRIGHTNESS</label>
+                            <input id="brightness" type="range" min="0%" max="100%" step="1%" value="0%">
 
+                        <label for="opacity">OPACITY</label>
+                            <input id="opacity" type="range">
 
+                        <label for="contrast">CONTRAST</label>
+                            <input id="contrast" type="range">
 
+                        <label for="blur">BLUR</label>
+                            <input id="blur" type="range">
 
+                        <label for="gray-scale">GRAY SCALE</label>
+                            <input id="gray-scale" type="range">
+
+                        <label for="sepia">SEPIA</label>
+                            <input id="sepia" type="range">
+
+                        <label for="HUE">HUE</label>
+                            <input id="HUE" type="range">
+
+                        <label for="saturation">SATURATION</label>
+                            <input id="saturation" type="range">
+
+                        <label for="negative">NEGATIVE</label>
+                            <input id="negative" type="range">
+
+                        <!-- FORM BUTTON RESTORED -->    
+
+                        <button class="button-restored">Restablecer filtros</button>        
+
+            </form>
+        </div>
+    </aside>
 
     <script src="index.js"></script>
     

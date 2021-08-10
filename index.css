@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+aside{
+    display: flex;
+    justify-content: flex-end;      
+}
+
+.div-image{
+    background-color: #252935;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;  
+}
+
+.image-form{
+    width: 90%;  
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-evenly;    
+}
+
+h2{
+    text-align: center;
+    font-family: 'Roboto' , sans-serif;
+    font-size: 20px;
+    font-weight: 600;  
+    padding: 10px;
+}
+
+h3{
+    font-family: 'Roboto' , sans-serif;
+    font-size: 13px;
+    font-weight: 600; 
+    margin-bottom: 10px;  
+    padding: 5px 5px 5px 0px;
+}
+
+label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px; 
+    padding: 5px;
+}
+
+.label-url{
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    margin: 5px;
+}
+
+input[type='range'] {
+    width: 100%;
+    background-color: #4E5565;
+    border-radius: 10px;
+    appearance: none;
+    height: 6px;
+    margin-top: 10px;
+}
+
+/** FORM: URL **/
+
+.url{
+    background-color: #30343F;
+    height: 35px;
+    border: 1px solid #30343F;
+    border-radius: 4px;
+    color: white;
+    padding-left: 5px;
+    margin: 0;
+}
+
+/** FORM: COLOR AND SELECT **/
+
+.color-and-select{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.color{
+    width: 45%;
+    height: 40px;    
+    background-color: transparent;
+    border: transparent;
+    margin: 0px;  
+}
+
+.select-background{
+    width: 50%;
+    height: 36px;
+    padding-left: 5px;
+    background-color: #30343F;
+    border: 1px solid #30343F;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.select-background:hover{
+    background-color: #4E5565;
+    transition: 0.5s ease-out;
+}
+
+/** FORM: FILTER RANGE **/
+
+
+/** FORM: BUTTON RESTORED **/
+
+.button-restored{
+    width: 150px;
+    height: 38px;
+    background-color:#30343F;
+    color: white;
+    font-family: 'Roboto' , sans-serif;
+    font-size: 15px;
+    border: 1px solid #30343F;
+    border-radius: 3px;
+    margin: 40px 0px;
+}
+
+.button-restored:hover{
+    background-color: #4E5565;
+    transition: 0.5s ease-out;
+}
+
+   
+
