@@ -129,7 +129,7 @@
 &nbsp;
 
 
-<p align="">📍 Link al proyecto: <a href="https://botcarola.github.io/Meme-Generator/" target="_blank">Memes generator</a></p>
+<h3>📍 Link al proyecto: <a href="https://botcarola.github.io/Meme-Generator/" target="_blank">Editor de memes</a></h3>
   
 &nbsp;
 
