@@ -15,12 +15,12 @@ body {
     background-color: #30343F;
 }
 
-.dark-mode li:hover{
+.dark-mode li:hover {
     background-color: #4E5565;
     cursor: pointer;
 }
 
-.dark-mode li:active{
+.dark-mode li:active {
     background-color: #4E5565;
 }
 
@@ -35,12 +35,12 @@ body {
     background-color: #EEEEEE;
 }
 
-.light-mode li:hover{
+.light-mode li:hover {
     background-color: #BDBDBD;
     cursor: pointer;
 }
 
-.light-mode li:active{
+.light-mode li:active {
     background-color: #BDBDBD;
 }
 
