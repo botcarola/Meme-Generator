@@ -12,24 +12,19 @@ lightMode.onclick = () => {
   headerLight.style.color = "#424242"
   mainLight.style.background = "#EEEEEE"
   lightIcon.style.color = "#424242"
-} */
-
-const darkMode = document.getElementById("dark-mode")
+}
+ */
 
 
 // dowload meme
 
-/* const dowloadMeme = document.getElementById("dowload-container");
-const dowlowadButton = document.getElementById("dowload-button");
+const dowloadMeme = document.getElementById("download-container");
+const downloadButton = document.getElementById("download-button");
 
 
-botonDescarga.onclick = () => {
+downloadButton.onclick = () => {
   domtoimage.toBlob(dowloadMeme)
   .then(function (blob) {
       window.saveAs(blob, 'Your Meme.png');
   })
-} */
-
-/* botonCambiarModo.onclic = () => {
-  
-} */
+}
