@@ -18,12 +18,12 @@ lightMode.onclick = () => {
 
 // dowload meme
 
-const dowloadMeme = document.getElementById("download-container");
+const downloadMeme = document.getElementById("download-container");
 const downloadButton = document.getElementById("download-button");
 
 
 downloadButton.onclick = () => {
-  domtoimage.toBlob(dowloadMeme)
+  domtoimage.toBlob(downloadMeme)
   .then(function (blob) {
       window.saveAs(blob, 'Your Meme.png');
   })
