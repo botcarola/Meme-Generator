@@ -16,12 +16,63 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
 </head>
 
+<body class="dark-mode">
 
+    <!-- header -->
 
-<body>
+    <header>
+
+        <h1 class="title">Memes generator</h1>
+
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-list-container" >
+                    <i class="fas fa-file-image button-icon-text"></i>
+                    Image
+                </li>
+                <li class="nav-list-container">
+                    <i class="fas fa-font button-icon-text"></i>
+                    Text
+                </li>
+                <li class="nav-list-container">
+                    <div>   
+                        <i class="far fa-lightbulb"></i>
+                     <!--    <i class="fas fa-lightbulb" id="light-icon"></i> -->
+                        Dark mode
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- main -->
+
+    <main >
+
+        <div id="download-container">
+            <div class="main-container" id="download-container">
+                <div class="main-top">TOP TEXT</div>
+                <div class="main-center"></div>
+                <div class="main-bottom">BOTTOM TEXT</div>
+                <div></div>
+            </div>
+        </div>
+
+        <button class="main-button" id="download-button">
+            <i class="fas fa-download button-icon-text"></i>
+            Download meme
+        </button>
+
+    </main>
+
+    <!-- aside -->
 
     <!-- ASIDE IMAGE-->
 
@@ -92,10 +143,11 @@
 
     <script src="index.js"></script>
     
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+ 
+    
 </body>
-
-
-
-
 
 </html>
