@@ -1,20 +1,26 @@
-// dark mode
+// dark & light mode
 
-/* const lightMode = document.getElementById("light-mode");
-const headerLight = document.getElementById("header-light")
-const mainLight = document.getElementById("main-light")
-const lightIcon = document.getElementById("light-icon")
-const lightList = document.getElementById("light-list")
-const lightModeText = document.getElementById("light-mode-txt")
+const darkMode = document.querySelector(".dark-mode")
+const buttonMode = document.querySelector(".button-mode")
+const lightMode = document.querySelector(".light-mode")
+// const iconLight = document.getElementById("icon-Light")
 
-lightMode.onclick = () => {
-  headerLight.style.background = "#E0E0E0"
-  headerLight.style.color = "#424242"
-  mainLight.style.background = "#EEEEEE"
-  lightIcon.style.color = "#424242"
+buttonMode.onclick = () => {
+    darkMode.classList.toggle("dark-mode")
+    darkMode.classList.toggle("light-mode")
+
+    if (darkMode.classList.contains("dark-mode")){
+        buttonMode.textContent = "Light mode"
+    }
+    else{
+        buttonMode.textContent = "Dark mode"
+    }
 }
- */
 
+// investigar cambio de icono
+
+// iconLight.classList.remove = ("far fa-lightbulb")
+// iconLight.classList.add = ("fas fa-lightbulb")
 
 // dowload meme
 

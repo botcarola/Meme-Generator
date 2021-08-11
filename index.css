@@ -4,10 +4,40 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* dark & light mode  */
+
+.dark-mode header {
+    color: #EEEEEE;
+    background-color: #191E2B;
+}
+
+.dark-mode main {
+    background-color: #30343F;
+}
+
+.dark-mode li:hover{
+    background-color: #4E5565;
+    cursor: pointer;
+}
+
+.light-mode header {
+    color: #424242;
+    background-color: #E0E0E0;
+}
+
+.light-mode main {
+    background-color: #EEEEEE;
+}
+
+.light-mode li:hover{
+    background-color: #BDBDBD;
+    cursor: pointer;
+}
+
 /* header */
 
 header {
-    background-color: #191E2B;
+  /*   background-color: #191E2B; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,19 +73,19 @@ nav {
     padding: 5px;
 }
 
-.nav-list-container:hover {
+/* .nav-list-container:hover {
     background-color: #4E5565;
     cursor: pointer;
-}
+} */
 
-.nav-list-container:active {
+/* .nav-list-container:active {
     background-color: #4E5565;
 }
-
+ */
 /* main */
 
 main {
-    background-color: #30343F;
+  /*   background-color: #30343F; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,7 +124,7 @@ main {
 .main-button {
     color: #fff;
     background-color: #2e7d32;
-    font-size: 10px;
+    font-size: 9px;
     border: none;
     border-radius: 5px;
     padding: 10px;
