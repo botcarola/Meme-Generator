@@ -12,19 +12,74 @@
     <title>Meme editor</title>
 
     <!-- FUENTE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
 </head>
 
+<body class="dark-mode">
+
+    
+    
+    
+
+    <!-- main -->
+
+    <main >
+
+        <!-- header -->
+
+        <header>
+
+            <h1 class="title">Meme Generator</h1>
+    
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-list-container" >
+                        <i class="fas fa-file-image button-icon-text" aria-label="imagen"></i>
+                        Image
+                    </li>
+                    <li class="nav-list-container">
+                        <i class="fas fa-font button-icon-text" aria-label="texto"></i>
+                        Text
+                    </li>
+                    <li class="nav-list-container">
+                        <div class="button-mode">   
+                           🌞 Light mode
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+    
+        </header>
+
+        <!-- CONTAINER -->    
+
+        <div class="download-container" id="download-container">
+            <div class="main-container">
+                <div class="main-top">TOP TEXT</div>
+                <div class="main-center">
+                    <img src="" id="image-container">
+                </div>
+                <div class="main-bottom">BOTTOM TEXT</div>
+            </div>
+        
+
+        <button class="main-button" id="download-button">
+            <i class="fas fa-download button-icon-text"></i>
+                Download meme
+        </button>
+    </div>
+
+       
 
 
-<body>
+    </main> 
 
-    <!-- ASIDE IMAGE-->
 
+    
+    <!-- aside -->    
     <aside>
         <div class="div-image">
             <form class="image-form">
@@ -42,12 +97,12 @@
                         <label class="color-and-select" for="color">
                                 <input class ="color" id="color" type="color" value="#ffffff"> 
                                     <select class="select-background" name="select">
-                                            <option value="ninguno" selected>Ninguno</option>
-                                            <option value="aclarar">Aclarar</option>
-                                            <option value="oscurecer">Oscurecer</option>
-                                            <option value="diferencia">Diferencia</option>
-                                            <option value="luminosidad">Luminosidad</option>
-                                            <option value="multiplicar">Multiplicar</option>
+                                            <option value="ninguno" selected>None</option>
+                                            <option value="aclarar">Bright</option>
+                                            <option value="oscurecer">Darken</option>
+                                            <option value="diferencia">Difference</option>
+                                            <option value="luminosidad">Luminosity</option>
+                                            <option value="multiplicar">Multiply</option>
                                     </select>
                         </label>
 
@@ -56,31 +111,31 @@
                     <h3>FILTER</h3>
 
                         <label for="brightness">BRIGHTNESS</label>
-                            <input id="brightness" type="range" min="0%" max="100%" step="1%" value="0%">
+                            <input id="brightness" type="range" min="1" max="10" step="1" value="0">
 
                         <label for="opacity">OPACITY</label>
-                            <input id="opacity" type="range">
+                            <input id="opacity" type="range" min="1" max="10" step="1" value="0">
 
                         <label for="contrast">CONTRAST</label>
-                            <input id="contrast" type="range">
+                            <input id="contrast" type="range" min="0%" max="100%" value="0">
 
                         <label for="blur">BLUR</label>
-                            <input id="blur" type="range">
+                            <input id="blur" type="range" min="0%" max="100%" value="0">
 
                         <label for="gray-scale">GRAY SCALE</label>
-                            <input id="gray-scale" type="range">
+                            <input id="gray-scale" type="range" min="0%" max="100%" value="0">
 
                         <label for="sepia">SEPIA</label>
-                            <input id="sepia" type="range">
+                            <input id="sepia" type="range" min="1" max="10" value="0">
 
                         <label for="HUE">HUE</label>
-                            <input id="HUE" type="range">
+                            <input id="HUE" type="range" min="1" max="10" value="0">
 
                         <label for="saturation">SATURATION</label>
-                            <input id="saturation" type="range">
+                            <input id="saturation" type="range" min="1" max="10" value="0">
 
                         <label for="negative">NEGATIVE</label>
-                            <input id="negative" type="range">
+                            <input id="negative" type="range" min="1" max="10" step="1" value="0">
 
                         <!-- FORM BUTTON RESTORED -->    
 
@@ -90,12 +145,15 @@
         </div>
     </aside>
 
+
+    
+    
+
     <script src="index.js"></script>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+    
 </body>
-
-
-
-
 
 </html>
