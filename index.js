@@ -49,7 +49,37 @@ inputColor.oninput = () => {
     colorHex.textContent = (inputColor.value)
 } 
 
+//Mix Blend 
 
+const mixBlend = document.getElementById("mix-blend"); //id de select 
+
+mixBlend.onchange = () => {
+
+    if (mixBlend.value === "aclarar") {
+        imageContainer.style.mixBlendMode = "lighten"
+    } 
+    else if (mixBlend.value === "oscurecer") {
+        imageContainer.style.mixBlendMode = "darken"
+    }     
+    else if (mixBlend.value === "diferencia") {
+        imageContainer.style.mixBlendMode = "difference"
+    }
+    else if (mixBlend.value === "luminosidad") {
+        imageContainer.style.mixBlendMode = "luminosity"
+    }
+    else if (mixBlend.value === "multiplicar") {
+        imageContainer.style.mixBlendMode = "multiply"
+    } 
+    else {
+        imageContainer.style.mixBlendMode = ""
+    }
+}
+ 
+
+/* const mixBlend = document.getElementById("mix-blend");
+mixBlend.addEventListener("change", () =>{
+    mainCenter.style.backgroundBlendMode = mixBlend.value
+});  */
 
 // Filters
 
