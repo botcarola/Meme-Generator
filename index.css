@@ -285,7 +285,7 @@ input[type='range'] {
 /** FORM: BUTTON RESTORED **/
 
 .button-restored{
-    width: 150px;
+    width: 95px;
     height: 38px;
     background-color:#30343F;
     color: white;
@@ -294,6 +294,7 @@ input[type='range'] {
     border: 1px solid #30343F;
     border-radius: 3px;
     margin: 40px 0px;
+    text-align: left;
 }
 
 .button-restored:hover{
