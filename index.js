@@ -29,7 +29,7 @@ downloadButton.onclick = () => {
 }
 
 
-// Image Panel 
+// Image URL Panel 
 
 const inputUrl = document.getElementById("input-url");
 const imageContainer = document.getElementById("image-container");
@@ -37,6 +37,17 @@ const imageContainer = document.getElementById("image-container");
 inputUrl.oninput = () => {
     imageContainer.src = inputUrl.value
 }
+
+//HEX change image panel
+
+const mainCenter = document.getElementById("main-center");
+const inputColor = document.getElementById("input-color");
+const colorHex = document.getElementById("color-hex"); 
+
+inputColor.oninput = () => {
+    mainCenter.style.backgroundColor = (inputColor.value)
+    colorHex.textContent = (inputColor.value)
+} 
 
 
 
