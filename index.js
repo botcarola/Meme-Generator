@@ -27,3 +27,8 @@ downloadButton.onclick = () => {
       window.saveAs(blob, 'Your Meme.png');
   })
 }
+
+
+// ASIDE IMAGE
+
+const asideImage = document.getElementById("aside-image")
