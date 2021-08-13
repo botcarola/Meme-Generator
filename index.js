@@ -16,6 +16,8 @@ buttonMode.onclick = () => {
     }
 }
 
+/* aside */
+
 // dowload meme
 
 const downloadMeme = document.getElementById("download-container");
@@ -28,4 +30,3 @@ downloadButton.onclick = () => {
   })
 }
 
-/* aside */
