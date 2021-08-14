@@ -108,7 +108,7 @@ nav {
 }
 
 .nav-list-container {
-  font-size: 12px;
+  font-size: 15px;
   border-radius: 3px;
   padding: 5px;
 }
@@ -136,8 +136,8 @@ main {
 }
 
 .main-container {
-  height: 450px;
-  width: 450px;
+  height: 600px;
+  width: 600px;
   font-size: 20px;
   font-weight: 900;
   display: flex;
@@ -167,14 +167,14 @@ main {
 }
 
 .main-button {
-  width: 120px;
-  height: 40px;
-  color: #fff;
-  background-color: #2e7d32;
-  font-size: 9px;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
+    width: 130px;
+    height: 50px;
+    color: #fff;
+    background-color: #2e7d32;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .main-button:hover {

@@ -16,20 +16,19 @@ buttonMode.onclick = () => {
     }
 }
 
-/* aside */
-
-// dowload meme
+// download meme
 
 const downloadMeme = document.getElementById("download-container");
 const downloadButton = document.getElementById("download-button");
 
 downloadButton.onclick = () => {
-    domtoimage.toBlob(downloadMeme)
-        .then(function (blob) {
-            window.saveAs(blob, 'Your_Meme.png');
-        })
+  domtoimage.toBlob(downloadMeme)
+  .then(function (blob) {
+      window.saveAs(blob, 'Your Meme.png');
+  })
 }
 
+/* aside */
 
 // Image Panel 
 
