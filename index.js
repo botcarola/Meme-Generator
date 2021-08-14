@@ -1,4 +1,4 @@
-// Dark & Light mode
+// dark & light mode
 
 const darkMode = document.querySelector(".dark-mode")
 const buttonMode = document.querySelector(".button-mode")
@@ -16,7 +16,9 @@ buttonMode.onclick = () => {
     }
 }
 
-// Download Meme
+/* aside */
+
+// dowload meme
 
 const downloadMeme = document.getElementById("download-container");
 const downloadButton = document.getElementById("download-button");
