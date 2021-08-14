@@ -130,9 +130,11 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     font-size: 30px;
     font-weight: 900;
+  
+
 }
 
 .main-center {
@@ -159,9 +161,7 @@ main {
 }
 
 
-/* ASIDE IMAGE */
-
-
+/* ASIDE */
 
 aside{
     width: 18%;
@@ -272,6 +272,7 @@ input[type='range'] {
 
 /** FORM: FILTER RANGE **/
 
+ 
 
 /** FORM: BUTTON RESTORED **/
 
@@ -290,4 +291,68 @@ input[type='range'] {
 .button-restored:hover{
     background-color: #4E5565;
     transition: 0.5s ease-out;
+}
+
+
+/** ASIDE TEXT **/
+
+.alignelement{
+    border: 1px;
+    display: inline-block;
+    width: auto;
+    margin: 0px 20px;
+    text-align: justify;
+}
+
+.maincontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.textalign {
+    margin-top: 3%;
+    height:30px;
+    width:30px;
+}
+
+.boxes {
+    background-color: #30343F;
+    height: 35px;
+    border: 1px solid #30343F;
+    border-radius: 4px;
+    color: white;
+    padding-left: 5px;
+    margin: 0;  
+
+}
+.fontbox {
+    background-color: #30343F;
+    height: 35px;
+    border: 1px solid #30343F;
+    border-radius: 4px;
+    color: white;
+    padding-left: 5px;
+    margin: 0;
+    margin-left: 2%;
+} 
+
+.fontsize {
+    background-color: #30343F;
+    height: 35px;
+    border: 2px solid #30343F;
+    border-radius: 4px;
+    color: white;
+    padding-left: 5px;
+}
+
+.colorbutton{
+    width: 55px;
+    height: 40px;    
+    background-color: transparent;
+    border: transparent;
+    margin: 0px;  
+}
+
+.txt1 {
+    font-family: Impact;
 }

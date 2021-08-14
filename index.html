@@ -16,24 +16,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
+    <!-- ICONOS -->
+    <script src="https://kit.fontawesome.com/24bbe0d5d2.js" crossorigin="anonymous"></script>
+
+
 </head>
-
 <body class="dark-mode">
-
-    
-    
-    
-
-    <!-- main -->
-
+     <!-- main -->
     <main >
-
         <!-- header -->
-
         <header>
-
             <h1 class="title">Meme Generator</h1>
-    
             <nav>
                 <ul class="nav-list">
                     <li class="nav-list-container" >
@@ -53,46 +46,31 @@
             </nav>
     
         </header>
-
         <!-- CONTAINER -->    
-
         <div class="download-container" id="download-container">
             <div class="main-container">
-                <div class="main-top">TOP TEXT</div>
+                <div class="main-top" id="txt1">TOP TEXT</div>
                 <div class="main-center">
                     <img src="" id="image-container">
                 </div>
-                <div class="main-bottom">BOTTOM TEXT</div>
+                <div class="main-bottom" id="txt2">BOTTOM TEXT</div>
             </div>
-        
-
         <button class="main-button" id="download-button">
             <i class="fas fa-download button-icon-text"></i>
                 Download meme
         </button>
     </div>
-
-       
-
-
-    </main> 
-
-
-    
+</main> 
     <!-- aside -->    
     <aside>
         <div class="div-image">
             <form class="image-form">
                     <h2>IMAGE</h2>
-
                     <!-- FORM: URL -->
-
                     <h3>URL</h3>
                         <label class="label-url" for="URL"></label>
                             <input class="url" id="url" type="url">
-
                     <!-- FORM: COLOR AND SELECT -->        
-
                     <h3>BACKGROUND</h3>           
                         <label class="color-and-select" for="color">
                                 <input class ="color" id="color" type="color" value="#ffffff"> 
@@ -105,11 +83,8 @@
                                             <option value="multiplicar">Multiply</option>
                                     </select>
                         </label>
-
                         <!-- FORM: FILTER RANGE -->
-               
                     <h3>FILTER</h3>
-
                         <label for="brightness">BRIGHTNESS</label>
                             <input id="brightness" type="range" min="1" max="10" step="1" value="0">
 
@@ -147,76 +122,76 @@
 
     <!--ASIDE TEXTO-->
 
-    <aside id="aside">
-        <form>
-            <h2>Texto</h2>
-            <label>Superior</label>
-            <textarea></textarea>
-            <div>
-                <input type="checkbox">
-                <label>Sin texto superior</label>
-            </div>
-            <label>Inferior</label>
-            <textarea></textarea>
-            <div>
-                <input type="checkbox">
-                <label>Sin texto inferior</label>
-            </div>
+    <aside>
+    <div class="div-image">
+        <form class="image-form">
+            <h2>TEXT</h2>
+            <h3>SUPERIOR</h3>
+            <input class="fontbox" type="text" value="TOP TEXT" id="toptxt"> 
+           <!--  <label class="fontbox"></label> -->
+                <div class="alignelement">
+                    <input type="checkbox" id="top-check">
+                    <label>No superior text</label>
+                </div>  
+            <h3>INFERIOR</h3>
+            <input class="fontbox" type="text" value="BOTTOM TEXT" id="btmtxt">
+            <!--<label class="fontbox"></label> -->
+                <div class="alignelement">
+                    <input type="checkbox" id="btm-check">
+                    <label>No inferior text</label>
+                </div>
             <br>
             <div>
-                <label>Fuente</label>
-                <select>
-                        <option>Arial</option>
-                        <option>Arial Black</option>
-                        <option>Impact</option>
-                        <option>Montserrat</option>
-                        <option>Comic Sans MS</option>
-                        <option>Helvetica</option>
-                        <option>Freestyle Script</option>
-                        <option>Verdana</option>
+                <h3>FONT</h3>
+                <select class="fontbox" id="optionfont">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Montserrat">Montserrat</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Helvetica" class="Helvetica">Helvetica</option>
+                        <option value="Freestyle Script">Freestyle Script</option>
+                        <option value="Verdana">Verdana</option>
                 </select>
-                <label>
-                    Tamaño
-                </label>
-                <input type="number"> 
+            <div class="maincontainer">   
+                <input type="number" style="width: 60px" class="fontsize" value="40">  
+                    <button class="textalign"><i class="fas fa-align-left"></i></button>
+                    <button class="textalign"><i class="fas fa-align-center"></i></button>
+                    <button class="textalign"><i class="fas fa-align-right"></i></button>
             </div>
-            <div>
-                <input type="image">
-                <input type="image">
-                <input type="image">
+            <div class="maincontainer">
+                <div>
+                    <label>Font color</label> 
+                    <input type="color" value= #000000 class="colorbutton"> 
+                </div> 
+                <div>
+                    <label>Background color</label>
+                    <input type="color" value= #FFFFFF class="colorbutton">
+                    <div>
+                        <input type="checkbox">
+                        <label>Transparent </label>
+                    </div>
+                </div>
+            </div>    
             </div>
-            <br>
+                <h3>OUTLINE</h3>
             <div>
-                <label>Color de fuente</label> 
-                <input type="color" value= #000000> 
-                <br>
-                <label>Color de fondo</label>
-                <input type="color" value= #FFFFFF>
-                <br>
-                <input type="checkbox">
-                <label>Fondo transparente</label>
+                <button id="button1" class="boxes">None</button>
+                <button id="button2" class="boxes">Light</button>
+                <button id="button3" class="boxes">Dark</button>
             </div>
-            <br>
-            <div>
-                <label>Contorno</label>
-                <button id="button1">Ninguno</button>
-                <button id="button2">Claro</button>
-                <button id="button3">Oscuro</button>
-            </div>
-            <br>
-            <div>
-                <label>Espaciado</label>
-                <input type="number">
-                <label>Interlineado</label>
-                <select>
+            <h3>SPACING</h3>
+                <input type="number" class="boxes" style="width: 60px" value="35">  
+            <h3>LINE SPACING</h3>
+                <select class="boxes">
                     <option value="0.8">0.8</option>
                     <option value="1.0">1.0</option>
                     <option value="1.2">1.2</option>
                     <option value="1.5">1.5</option>
                     <option value="2.0">2.0</option>
                 </select>
-            </div>
         </form>
+    </div>
     
     
 
