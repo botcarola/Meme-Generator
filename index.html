@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
     <meta charset="UTF-8">
@@ -22,56 +23,150 @@
 
     <!-- header -->
 
-    <header>
 
-        <h1 class="title">Memes generator</h1>
 
-        <nav>
-            <ul class="nav-list">
-                <li class="nav-list-container" >
-                    <i class="fas fa-file-image button-icon-text" aria-label="imagen"></i>
-                    Image
-                </li>
-                <li class="nav-list-container">
-                    <i class="fas fa-font button-icon-text" aria-label="texto"></i>
-                    Text
-                </li>
-                <li class="nav-list-container">
-                    <div class="button-mode">   
-                       🌞 Light mode
-                    </div>
-                </li>
-            </ul>
-        </nav>
-
-    </header>
 
     <!-- main -->
 
-    <main >
+    <main>
 
-        <div id="download-container">
+        <!-- header -->
+
+        <header>
+
+            <h1 class="title">Meme Generator</h1>
+
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-list-container">
+                        <i class="fas fa-file-image button-icon-text" aria-label="imagen"></i>
+                        Image
+                    </li>
+                    <li class="nav-list-container">
+                        <i class="fas fa-font button-icon-text" aria-label="texto"></i>
+                        Text
+                    </li>
+                    <li class="nav-list-container">
+                        <div class="button-mode">
+                            🌞 Light mode
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!-- CONTAINER -->
+
+        <div class="download-container" id="download-container">
             <div class="main-container">
                 <div class="main-top">TOP TEXT</div>
-                <div class="main-center"></div>
+                <div class="main-center">
+                    <img class="image-container" src="" id="image-container">
+                </div>
                 <div class="main-bottom">BOTTOM TEXT</div>
             </div>
-        </div>
-
-        <button class="main-button" id="download-button">
-            <i class="fas fa-download button-icon-text"></i>
-            Download meme
-        </button>
-
-    </main>
 
     <!-- aside -->
 
+            <button class="main-button" id="download-button">
+                <i class="fas fa-download button-icon-text"></i>
+                Download meme
+            </button>
+        </div>
+
+
+
+
+    </main>
+
+
+
+    <!-- aside -->
+    <aside>
+        <div class="div-image">
+            <form class="image-form">
+                <h2>IMAGE</h2>
+
+                <!-- FORM: URL -->
+
+                <h3>URL</h3>
+                <label class="label-url" for="URL"></label>
+                <input class="url change-color" id="input-url" type="text">
+
+                <!-- FORM: COLOR AND SELECT -->
+
+                <h3>BACKGROUND</h3>
+
+                <div class="custom-container">
+                    <div class="custom-color change-color"><label class="color-and-select" for="color">
+                            <input class="color" id="color" type="color" value="#ffffff">
+                            <span>#ffffff</span>
+                    </div>
+
+                    <select class="select-background change-color" name="select">
+                        <option value="ninguno" selected>None</option>
+                        <option value="aclarar">Bright</option>
+                        <option value="oscurecer">Darken</option>
+                        <option value="diferencia">Difference</option>
+                        <option value="luminosidad">Luminosity</option>
+                        <option value="multiplicar">Multiply</option>
+                    </select>
+                    </label>
+
+                </div>
+                <!-- FORM: FILTER RANGE -->
+
+                <h3>FILTER</h3>
+
+                <label for="brightness">BRIGHTNESS</label>
+                <input id="brightness" type="range" min="0" max="1" step="0.1" value="1">
+
+                <label for="opacity">OPACITY</label>
+                <input id="opacity" type="range" min="0" max="1" step="0.1" value="1">
+
+                <label for="contrast">CONTRAST</label>
+                <input id="contrast" type="range" min="100" max="1000" step="1" value="100">
+
+                <label for="blur">BLUR</label>
+                <input id="blur" type="range" min="0" max="10" step="0.1" value="0">
+
+                <label for="gray-scale">GRAY SCALE</label>
+                <input id="gray-scale" type="range" min="0" max="100" step="1" value="0">
+
+                <label for="sepia">SEPIA</label>
+                <input id="sepia" type="range" min="0" max="100" step="1" value="0">
+
+                <label for="HUE">HUE</label>
+                <input id="HUE" type="range" min="0" max="359" step="1" value="0">
+
+                <label for="saturation">SATURATION</label>
+                <input id="saturation" type="range" min="100" max="1000" step="10" value="100">
+
+                <label for="negative">NEGATIVE</label>
+                <input id="negative" type="range" min="0" max="1" step="0.1" value="0">
+
+                <!-- FORM BUTTON RESTORED -->
+
+                <button class="button-restored change-color">Reset Filters</button>
+
+            </form>
+        </div>
+    </aside>
+
+
+
+
+
     <script src="index.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
