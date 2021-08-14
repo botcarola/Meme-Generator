@@ -5,6 +5,7 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     align-content: flex-start;
+    height: 100vh;
 }
 
 /* dark mode  */
@@ -73,10 +74,11 @@ body {
 /* header */
 
 header {
-    display: flex;
-    flex-direction: column;    
-    align-items: center;
-    padding-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;    
+  align-items: center;
+  padding-top: 10px;
 }
 
 .title {
@@ -364,6 +366,10 @@ input[type="range"]::-webkit-slider-thumb {
 
 
 /** ASIDE TEXT **/
+
+.aside-text, .aside-image{
+  display: none;
+}
 
 .alignelement{
     border: 1px;

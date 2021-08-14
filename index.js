@@ -16,7 +16,7 @@ buttonMode.onclick = () => {
     }
 }
 
-/* aside */
+
 
 // dowload meme
 
@@ -29,6 +29,30 @@ downloadButton.onclick = () => {
             window.saveAs(blob, 'Your_Meme.png');
         })
 }
+
+
+//  text image button display none/block
+
+const asideImage = document.getElementById("aside-image")
+const asideText = document.getElementById("aside-text")
+const buttonImage = document.getElementById("button-image")
+const buttonText = document.getElementById("button-text")
+
+
+const openAsideImage = () =>{
+    asideImage.style.display = "block"
+    asideText.style.display = "none"
+}
+
+buttonImage.onclick = openAsideImage
+
+const openAsideText = () =>{
+    asideText.style.display = "block"
+    asideImage.style.display = "none"
+}
+
+buttonText.onclick = openAsideText
+
 
 
 // Image Panel 
@@ -110,6 +134,4 @@ optionFont.addEventListener("change", () => {
 
 
 
-// ASIDE IMAGE
 
-const asideImage = document.getElementById("aside-image")
