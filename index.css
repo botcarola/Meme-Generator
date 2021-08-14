@@ -1,12 +1,10 @@
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  align-content: flex-start;
-  height: 100vh;
+    margin: 0;
+    padding: 0;      
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-content: flex-start;
 }
 
 /* dark mode  */
@@ -75,11 +73,10 @@ body {
 /* header */
 
 header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10px;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    padding-top: 10px;
 }
 
 .title {
@@ -324,6 +321,8 @@ input[type="range"]::-webkit-slider-thumb {
 
 /** FORM: BUTTON RESTORED **/
 
+/** CHECKEAR BOTONES **/
+
 .button-restored {
   width: 150px;
   height: 38px;
@@ -340,4 +339,89 @@ input[type="range"]::-webkit-slider-thumb {
 .button-restored:focus {
   background-color: #4e5565;
   transition: 0.5s ease-out;
+}
+ 
+
+/** FORM: BUTTON RESTORED **/
+
+.button-reset{
+    width: 95px;
+    height: 38px;
+    background-color:#30343F;
+    color: white;
+    font-family: 'Roboto' , sans-serif;
+    font-size: 15px;
+    border: 1px solid #30343F;
+    border-radius: 3px;
+    margin: 40px 0px;
+    text-align: left;
+}
+
+.button-reset:hover{
+    background-color: #4E5565;
+    transition: 0.5s ease-out;
+}
+
+
+/** ASIDE TEXT **/
+
+.alignelement{
+    border: 1px;
+    display: inline-block;
+    width: auto;
+    margin: 0px 20px;
+    text-align: justify;
+}
+
+.maincontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.textalign {
+    margin-top: 3%;
+    height:30px;
+    width:30px;
+}
+
+.boxes {
+    background-color: #30343F;
+    height: 35px;
+    border: 1px solid #30343F;
+    border-radius: 4px;
+    color: white;
+    padding-left: 5px;
+    margin: 0;  
+
+}
+.fontbox {
+    background-color: #30343F;
+    height: 35px;
+    border: 1px solid #30343F;
+    border-radius: 4px;
+    color: white;
+    padding-left: 5px;
+    margin: 0;
+    margin-left: 2%;
+} 
+
+.fontsize {
+    background-color: #30343F;
+    height: 35px;
+    border: 2px solid #30343F;
+    border-radius: 4px;
+    color: white;
+    padding-left: 5px;
+}
+
+.colorbutton{
+    width: 55px;
+    height: 40px;    
+    background-color: transparent;
+    border: transparent;
+    margin: 0px;  
+}
+
+.txt1 {
+    font-family: Impact;
 }
