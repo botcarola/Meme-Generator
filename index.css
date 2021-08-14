@@ -1,7 +1,6 @@
 body {
     margin: 0;
-    padding: 0;
-    width: 100%;  
+    padding: 0;      
     color: #fff;
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -276,8 +275,8 @@ input[type='range'] {
 
 /** FORM: BUTTON RESTORED **/
 
-.button-restored{
-    width: 150px;
+.button-reset{
+    width: 95px;
     height: 38px;
     background-color:#30343F;
     color: white;
@@ -286,9 +285,10 @@ input[type='range'] {
     border: 1px solid #30343F;
     border-radius: 3px;
     margin: 40px 0px;
+    text-align: left;
 }
 
-.button-restored:hover{
+.button-reset:hover{
     background-color: #4E5565;
     transition: 0.5s ease-out;
 }

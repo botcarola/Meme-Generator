@@ -76,9 +76,16 @@ const optionFont = document.getElementById("optionfont")
 
 optionFont.addEventListener("change", () => {
     txt1.style.fontFamily = '${optionFont.value}';
+    txt1.style.fontFamily = "Impact"; 
+
+    console.log(optionFont.value)  
 });
 
-/*             txt1.style.fontFamily = "Impact"; */   
-/*     console.log(optionFont.value)  */
+             
 
 
+
+
+// ASIDE IMAGE
+
+const asideImage = document.getElementById("aside-image")
