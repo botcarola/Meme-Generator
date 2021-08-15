@@ -30,12 +30,12 @@
             <nav>
                 <ul class="nav-list">
                     <li class="nav-list-container">
-                        <button id="button-image">
+                        <button class="button-image" id="button-image">
                         <i class="fas fa-file-image button-icon-text" aria-label="imagen"></i>
                         Image</button>
                     </li>
                     <li class="nav-list-container">
-                        <button id ="button-text">
+                        <button class="button-image" id ="button-text">
                         <i class="fas fa-font button-icon-text" aria-label="texto"></i>
                         Text </button>
                     </li>
@@ -157,20 +157,29 @@
 
     <div class="div-image">
         <form class="image-form">
+
             <h2>TEXT</h2>
 
             <h3>SUPERIOR</h3>
-            <input class="fontbox" type="text" value="TOP TEXT" id="toptxt"> 
-           <!--  <label class="fontbox"></label> -->
-                <div class="alignelement">
+                <label>
+                    <textarea class="fontbox" value="TOP TEXT" id="toptxt">
+                    </textarea>   
+                </label> 
+
+                <div>
                     <input type="checkbox" id="top-check">
                     <label>No superior text</label>
                 </div> 
 
             <h3>INFERIOR</h3>
 
-            <input class="fontbox" type="textarea" value="BOTTOM TEXT" id="btmtxt">
-            <!--<label class="fontbox"></label> -->
+                <label>
+                    <textarea class="fontbox" value="BOTTOM TEXT" id="btmtxt"></textarea>
+
+                </label>
+
+            
+            
                 <div class="alignelement">
                     <input type="checkbox" id="btm-check">
                     <label>No inferior text</label>

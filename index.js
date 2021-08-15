@@ -31,7 +31,7 @@ downloadButton.onclick = () => {
 }
 
 
-//  text image button display none/block
+// form  text/image button display none/block
 
 const asideImage = document.getElementById("aside-image")
 const asideText = document.getElementById("aside-text")

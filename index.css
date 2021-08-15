@@ -24,6 +24,10 @@ body {
   background-color: #252935;
 }
 
+.dark-mode .button-image{
+  color: white;
+}
+
 .dark-mode li:hover {
   background-color: #4e5565;
   cursor: pointer;
@@ -71,6 +75,10 @@ body {
   background-color: #bdbdbd;
 }
 
+.light-mode .button-image:hover{
+  
+}
+
 /* header */
 
 header {
@@ -107,7 +115,7 @@ nav {
 }
 
 .nav-list-container {
-  font-size: 12px;
+  font-size: 15px;
   border-radius: 3px;
   padding: 5px;
 }
@@ -135,8 +143,8 @@ main {
 }
 
 .main-container {
-  height: 450px;
-  width: 450px;
+  height: 600px;
+  width: 600px;
   font-size: 20px;
   font-weight: 900;
   display: flex;
@@ -166,11 +174,11 @@ main {
 }
 
 .main-button {
-  width: 120px;
-  height: 40px;
+  width: 130px;
+  height: 50px;
   color: #fff;
   background-color: #2e7d32;
-  font-size: 9px;
+  font-size: 12px;
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -184,6 +192,16 @@ main {
 .image-container {
   width: 100%;
 }
+
+.button-image{
+  border: none;
+  background-color: transparent;
+ 
+}
+
+
+
+
 
 /* ASIDE IMAGE */
 
@@ -204,20 +222,20 @@ aside {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+ 
 }
 
 h2 {
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
   padding: 10px;
 }
 
 h3 {
   font-family: "Roboto", sans-serif;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 600;
   margin-bottom: 10px;
   padding: 5px 5px 5px 0px;
@@ -225,7 +243,7 @@ h3 {
 
 label {
   font-family: "Roboto", sans-serif;
-  font-size: 10px;
+  font-size: 13px;
   padding: 5px;
 }
 
@@ -371,63 +389,63 @@ input[type="range"]::-webkit-slider-thumb {
   display: none;
 }
 
-.alignelement{
-    border: 1px;
-    display: inline-block;
-    width: auto;
-    margin: 0px 20px;
-    text-align: justify;
-}
-
+/** **/
+ /**
 .maincontainer {
     display: flex;
     justify-content: center;
-}
+} **/
 
 .textalign {
-    margin-top: 3%;
-    height:30px;
-    width:30px;
+  margin-top: 3%;
+  height:30px;
+  width:30px;
 }
 
 .boxes {
-    background-color: #30343F;
-    height: 35px;
-    border: 1px solid #30343F;
-    border-radius: 4px;
-    color: white;
-    padding-left: 5px;
-    margin: 0;  
+  background-color: #30343F;
+  height: 35px;
+  border: 1px solid #30343F;
+  border-radius: 4px;
+  color: white;
+  padding-left: 5px;
+  margin: 0;  
 
 }
+
+textarea{
+  text-align: left;
+  padding-left: 5px;
+
+}
+
 .fontbox {
-    background-color: #30343F;
-    height: 35px;
-    border: 1px solid #30343F;
-    border-radius: 4px;
-    color: white;
-    padding-left: 5px;
-    margin: 0;
-    margin-left: 2%;
+  background-color: #30343F;
+  width: 95%;
+  height: 35px;
+  border: 1px solid #30343F;
+  border-radius: 4px;
+  color: white;
+  
 } 
 
 .fontsize {
-    background-color: #30343F;
-    height: 35px;
-    border: 2px solid #30343F;
-    border-radius: 4px;
-    color: white;
-    padding-left: 5px;
+  background-color: #30343F;
+  height: 35px;
+  border: 2px solid #30343F;
+  border-radius: 4px;
+  color: white;
+  padding-left: 5px;
 }
 
 .colorbutton{
-    width: 55px;
-    height: 40px;    
-    background-color: transparent;
-    border: transparent;
-    margin: 0px;  
+  width: 55px;
+  height: 40px;    
+  background-color: transparent;
+  border: transparent;
+  margin: 0px;  
 }
 
 .txt1 {
-    font-family: Impact;
+  font-family: Impact;
 }
