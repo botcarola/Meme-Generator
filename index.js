@@ -117,39 +117,83 @@ const btmCheck = document.getElementById("btm-check");
             txt2.style.display = "flex";    }
     });
 
-// cambio de familia de fuente
+// cambio de familia de fuente REVISAR, NO ANDA
 
 const optionFont = document.getElementById("optionfont")
 
 optionFont.addEventListener("change", () => {
-    txt1.style.fontFamily = '${optionFont.value}';
-    txt1.style.fontFamily = "Impact"; 
+txt1.style.fontFamily = '${optionFont.value}';
+txt1.style.fontFamily = "Impact"; 
 
-    console.log(optionFont.value)  
+console.log(optionFont.value)  
 });
 
 // buttons textalign
-             
+            
 const textAlignLeft = document.getElementById("textalign-left")
 const textAlignCenter = document.getElementById("textalign-center")
 const textAlignRight = document.getElementById("textalign-right")
 
 textAlignLeft.onclick = () => {
-    txt1.style.justifyContent = "flex-start"
-    txt2.style.justifyContent = "flex-start"
+txt1.style.justifyContent = "flex-start"
+txt2.style.justifyContent = "flex-start"
 }
 
 textAlignCenter.onclick = () => {
-    txt1.style.justifyContent = "center"
-    txt2.style.justifyContent = "center"
+txt1.style.justifyContent = "center"
+txt2.style.justifyContent = "center"
 
 }
 
 textAlignRight.onclick = () => {
-    txt1.style.justifyContent = "flex-end"
-    txt2.style.justifyContent = "flex-end"
+txt1.style.justifyContent = "flex-end"
+txt2.style.justifyContent = "flex-end"
 }
 
+// color de texto de divs de texto 
+
+const inputColorText = document.getElementById("font-color")
+
+inputColorText.addEventListener('input', () =>{
+txt1.style.color = inputColorText.value
+txt2.style.color = inputColorText.value
+})
+
+// background color de divs de texto
+
+const inputBackgroundColorText = document.getElementById("back-color")
+
+inputBackgroundColorText.addEventListener('input', () =>{
+    txt1.style.backgroundColor = inputBackgroundColorText.value
+    txt2.style.backgroundColor = inputBackgroundColorText.value
+})
+
+// background image div principal
+
+const contenedorPrincipal = document.getElementById("container-principal")
+console.log(contenedorPrincipal)
 
 
+
+// button transparent
+
+const inputCheckTransparent = document.getElementById("check-transparent")
+const backgroundColor = document.getElementById("background-image-color")
+
+inputCheckTransparent.addEventListener('change', () =>{
+
+if ( inputCheckTransparent.checked == true ){
+    txt1.style.backgroundColor = backgroundColor.value
+    txt2.style.backgroundColor = backgroundColor.value
+} 
+else if ( inputCheckTransparent.checked == false){
+    txt1.style.backgroundColor = inputBackgroundColorText.value
+txt2.style.backgroundColor = inputBackgroundColorText.value
+
+}
+})
+
+
+    
+    
 
