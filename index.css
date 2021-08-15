@@ -1,12 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
   color: #fff;
   font-family: "Roboto", sans-serif;
   display: flex;
   align-content: flex-start;
-  height: 100vh;
 }
 
 /* dark mode  */
@@ -23,6 +21,10 @@ body {
 .dark-mode aside {
   color: #eeeeee;
   background-color: #252935;
+}
+
+.dark-mode .button-image {
+  color: white;
 }
 
 .dark-mode li:hover {
@@ -72,6 +74,9 @@ body {
   background-color: #bdbdbd;
 }
 
+.light-mode .button-image:hover {
+}
+
 /* header */
 
 header {
@@ -108,7 +113,7 @@ nav {
 }
 
 .nav-list-container {
-  font-size: 12px;
+  font-size: 15px;
   border-radius: 3px;
   padding: 5px;
 }
@@ -132,18 +137,18 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding-bottom: 100px;
+  padding: 30px 30px 100px 30px;
+
 }
 
 .main-container {
-  height: 450px;
-  width: 450px;
+  height: 600px;
+  width: 600px;
   font-size: 20px;
   font-weight: 900;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px;
 }
 
 .main-top,
@@ -160,21 +165,22 @@ main {
 }
 
 .main-center {
-  height: 80%;
+  height: 100%;
   width: 100%;
   background-color: #000;
   text-align: center;
 }
 
 .main-button {
-  width: 120px;
-  height: 40px;
+  width: 130px;
+  height: 50px;
   color: #fff;
   background-color: #2e7d32;
-  font-size: 9px;
+  font-size: 12px;
   border: none;
   border-radius: 5px;
   padding: 10px;
+  margin-top: 20px;
 }
 
 .main-button:hover {
@@ -186,6 +192,16 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.button-image {
+  border: none;
+  background-color: transparent;
+}
+
+#loading-meme {
+  display: none;
+  font-size: 2rem;
 }
 
 /* ASIDE IMAGE */
@@ -207,38 +223,34 @@ aside {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
 h2 {
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
-  padding: 10px;
+  padding: 8px;
 }
 
 h3 {
   font-family: "Roboto", sans-serif;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding: 5px 5px 5px 0px;
 }
 
 label {
   font-family: "Roboto", sans-serif;
-  font-size: 10px;
-  padding: 5px;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 4px;
 }
 
 .label-url {
   margin: 0;
   padding: 0;
-}
-
-input {
-  margin: 5px;
 }
 
 input[type="range"] {
@@ -248,16 +260,16 @@ input[type="range"] {
   border-radius: 10px;
   appearance: none;
   height: 6px;
-  margin-top: 10px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: none;
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
   background: #00a498;
+  cursor: pointer;
 }
 
 /** FORM: URL **/
@@ -283,7 +295,7 @@ input[type="range"]::-webkit-slider-thumb {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 45px 0 0;
+  padding: 0 10px 0 0;
 }
 
 .color {
@@ -306,14 +318,15 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .select-background {
-  width: 125px;
-  height: 36px;
+  width: 100%;
+  height: 40px;
   padding-left: 5px;
   background-color: #30343f;
   border: 1px solid #30343f;
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
   color: #eeeeee;
+  margin-left: 10px;
 }
 
 .select-background:hover,
@@ -325,6 +338,8 @@ input[type="range"]::-webkit-slider-thumb {
 /** FORM: FILTER RANGE **/
 
 /** FORM: BUTTON RESTORED **/
+
+/** CHECKEAR BOTONES **/
 
 .button-restored {
   width: 150px;
@@ -340,6 +355,173 @@ input[type="range"]::-webkit-slider-thumb {
 
 .button-restored:hover,
 .button-restored:focus {
+  background-color: #4e5565;
+  transition: 0.5s ease-out;
+}
+
+/** FORM: BUTTON RESTORED **/
+
+.button-reset {
+  width: 95px;
+  height: 38px;
+  background-color: #30343f;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  border: 1px solid #30343f;
+  border-radius: 3px;
+  margin: 40px 0px;
+  text-align: left;
+}
+
+.button-reset:hover {
+  background-color: #4e5565;
+  transition: 0.5s ease-out;
+}
+
+/** ASIDE TEXT **/
+
+.aside-text,
+.aside-image {
+  display: none;
+}
+
+.div-input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/**/
+
+/**/
+
+.fontbox {
+  display: flex;
+  background-color: #30343f;
+  width: 100%;
+  border: 1px solid #30343f;
+  border-radius: 4px;
+  color: white;
+  font-size: 15px;
+}
+
+.fontbox:hover {
+  background-color: #4e5565;
+  transition: 0.5s ease-out;
+}
+
+.select-font {
+  width: 100%;
+  height: 38px;
+  background-color: #30343f;
+  color: white;
+  font-size: 15px;
+  border: 1px solid #30343f;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.select-font:hover {
+  background-color: #4e5565;
+  transition: 0.5s ease-out;
+}
+
+.textalign-font {
+  height: 40px;
+  width: 40px;
+  background-color: #30343f;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.textalign-font:hover {
+  background-color: #4e5565;
+  transition: 0.5s ease-out;
+}
+
+.input-number {
+  width: 45%;
+  height: 35px;
+  padding-left: 5px;
+  background-color: #30343f;
+  color: white;
+  border: 1px solid #30343f;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.input-number:hover {
+  background-color: #4e5565;
+  transition: 0.5s ease-out;
+}
+
+/** input background color, font color **/
+
+.div-input-color {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-font-color {
+  width: 47%;
+}
+
+.fontsize {
+  background-color: #30343f;
+  height: 35px;
+  border: 2px solid #30343f;
+  border-radius: 4px;
+  color: white;
+  padding-left: 5px;
+}
+
+.colorbutton {
+  width: 55px;
+  height: 40px;
+  background-color: transparent;
+  border: transparent;
+  margin: 0px;
+}
+
+.txt1 {
+  font-family: Impact;
+}
+
+/** outline **/
+
+.boxes {
+  width: 32%;
+  height: 35px;
+  background-color: #30343f;
+  border: 1px solid #30343f;
+  border-radius: 4px;
+  color: white;
+  font-size: 15px;
+}
+
+.boxes:hover {
+  background-color: #4e5565;
+  transition: 0.5s ease-out;
+}
+
+/** spacing **/
+
+.spacing-number {
+  width: 95%;
+  height: 35px;
+  background-color: #30343f;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  padding-left: 10px;
+}
+
+.spacing-number:hover {
   background-color: #4e5565;
   transition: 0.5s ease-out;
 }

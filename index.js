@@ -1,4 +1,4 @@
-// Dark & Light mode
+// dark & light mode
 
 const darkMode = document.querySelector(".dark-mode")
 const buttonMode = document.querySelector(".button-mode")
@@ -16,20 +16,49 @@ buttonMode.onclick = () => {
     }
 }
 
-// Download Meme
+
+
+// dowload meme
 
 const downloadMeme = document.getElementById("download-container");
 const downloadButton = document.getElementById("download-button");
+const loadingMeme = document.getElementById("loading-meme");
 
 downloadButton.onclick = () => {
+    loadingMeme.style.display = "block";
     domtoimage.toBlob(downloadMeme)
         .then(function (blob) {
             window.saveAs(blob, 'Your_Meme.png');
+            loadingMeme.style.display = "none";
         })
 }
 
 
-// Image URL Panel 
+// form  text/image button display none/block
+
+const asideImage = document.getElementById("aside-image")
+const asideText = document.getElementById("aside-text")
+const buttonImage = document.getElementById("button-image")
+const buttonText = document.getElementById("button-text")
+
+
+const openAsideImage = () => {
+    asideImage.style.display = "block"
+    asideText.style.display = "none"
+}
+
+buttonImage.onclick = openAsideImage
+
+const openAsideText = () => {
+    asideText.style.display = "block"
+    asideImage.style.display = "none"
+}
+
+buttonText.onclick = openAsideText
+
+
+
+// Image Panel 
 
 const inputUrl = document.getElementById("input-url");
 const imageContainer = document.getElementById("image-container");
@@ -117,9 +146,88 @@ const setFilter = (filter, value) => {
 
 const inputs = document.querySelectorAll("input[type=range]");
 console.log(inputs)
-for(let i = 0; i < inputs.length; i ++)
+for (let i = 0; i < inputs.length; i++)
     inputs[i].oninput = (event) => {
         imageContainer.style.filter = setFilter(inputs[i].id, event.target.value)
     }
+
+// text aside
+
+// edición de texto inferior y superior 
+
+const toptxt = document.getElementById("toptxt");
+const btmtxt = document.getElementById("btmtxt");
+
+const txt1 = document.getElementById("txt1");
+const txt2 = document.getElementById("txt2");
+
+
+toptxt.addEventListener("keyup", () => {
+    txt1.innerHTML = toptxt.value;
+});
+
+
+btmtxt.addEventListener("keyup", () => {
+    txt2.innerHTML = btmtxt.value;
+});
+
+// remoción de texto superior e inferior 
+
+const topCheck = document.getElementById("top-check");
+const btmCheck = document.getElementById("btm-check");
+
+
+topCheck.addEventListener("click", () => {
+    console.log(topCheck.checked)
+    if (topCheck.checked) {
+        txt1.style.display = "none";
+    } else {
+        txt1.style.display = "flex";
+    }
+});
+
+btmCheck.addEventListener("click", () => {
+    console.log(btmCheck.checked)
+    if (btmCheck.checked) {
+        txt2.style.display = "none";
+    } else {
+        txt2.style.display = "flex";
+    }
+});
+
+// cambio de familia de fuente
+
+const optionFont = document.getElementById("optionfont")
+
+optionFont.addEventListener("change", () => {
+    txt1.style.fontFamily = '${optionFont.value}';
+    txt1.style.fontFamily = "Impact";
+
+    console.log(optionFont.value)
+});
+
+// buttons textalign
+
+const textAlignLeft = document.getElementById("textalign-left")
+const textAlignCenter = document.getElementById("textalign-center")
+const textAlignRight = document.getElementById("textalign-right")
+
+textAlignLeft.onclick = () => {
+    txt1.style.justifyContent = "flex-start"
+    txt2.style.justifyContent = "flex-start"
+}
+
+textAlignCenter.onclick = () => {
+    txt1.style.justifyContent = "center"
+    txt2.style.justifyContent = "center"
+
+}
+
+textAlignRight.onclick = () => {
+    txt1.style.justifyContent = "flex-end"
+    txt2.style.justifyContent = "flex-end"
+}
+
+
 
 
