@@ -258,9 +258,6 @@ backgroundColor.addEventListener('input', () =>{
 })
 
 
-
-
-
 // button transparent
 
 const inputCheckTransparent = document.getElementById("check-transparent")
@@ -278,6 +275,5 @@ txt2.style.backgroundColor = inputBackgroundColorText.value
 })
 
 
-    
-    
+
 
