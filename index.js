@@ -22,11 +22,14 @@ buttonMode.onclick = () => {
 
 const downloadMeme = document.getElementById("download-container");
 const downloadButton = document.getElementById("download-button");
+const loadingMeme = document.getElementById("loading-meme");
 
 downloadButton.onclick = () => {
+    loadingMeme.style.display = "block";
     domtoimage.toBlob(downloadMeme)
         .then(function (blob) {
             window.saveAs(blob, 'Your_Meme.png');
+            loadingMeme.style.display = "none";
         })
 }
 
@@ -39,14 +42,14 @@ const buttonImage = document.getElementById("button-image")
 const buttonText = document.getElementById("button-text")
 
 
-const openAsideImage = () =>{
+const openAsideImage = () => {
     asideImage.style.display = "block"
     asideText.style.display = "none"
 }
 
 buttonImage.onclick = openAsideImage
 
-const openAsideText = () =>{
+const openAsideText = () => {
     asideText.style.display = "block"
     asideImage.style.display = "none"
 }
@@ -64,17 +67,90 @@ inputUrl.oninput = () => {
     imageContainer.src = inputUrl.value
 }
 
+//HEX change image panel
 
-// Filters
+const mainCenter = document.getElementById("main-center");
+const inputColor = document.getElementById("input-color");
+const colorHex = document.getElementById("color-hex");
 
-const brightness = document.getElementById("brightness");
-console.log(brightness)
-
-const handleChange = (event) => {
-    console.log(event.target.value)
+inputColor.oninput = () => {
+    mainCenter.style.backgroundColor = (inputColor.value)
+    colorHex.textContent = (inputColor.value)
 }
 
-brightness.addEventListener("change", handleChange)
+//Mix Blend 
+
+const mixBlend = document.getElementById("mix-blend"); //id de select 
+
+mixBlend.onchange = () => {
+
+    if (mixBlend.value === "aclarar") {
+        imageContainer.style.mixBlendMode = "lighten"
+    }
+    else if (mixBlend.value === "oscurecer") {
+        imageContainer.style.mixBlendMode = "darken"
+    }
+    else if (mixBlend.value === "diferencia") {
+        imageContainer.style.mixBlendMode = "difference"
+    }
+    else if (mixBlend.value === "luminosidad") {
+        imageContainer.style.mixBlendMode = "luminosity"
+    }
+    else if (mixBlend.value === "multiplicar") {
+        imageContainer.style.mixBlendMode = "multiply"
+    }
+    else {
+        imageContainer.style.mixBlendMode = ""
+    }
+}
+
+
+// Filter 
+
+let brightnessFilter = 1;
+let opacityFilter = 1;
+let contrastFilter = 100;
+let blurFilter = 0;
+let grayscaleFilter = 0;
+let sepiaFilter = 0;
+let saturateFilter = 100;
+let invertFilter = 0;
+let hueFilter = 0;
+
+
+const setFilter = (filter, value) => {
+
+    if (filter === "brightness") {
+        brightnessFilter = value;
+    } else if (filter === "opacity") {
+        opacityFilter = value;
+    } else if (filter === "contrast") {
+        contrastFilter = value;
+    } else if (filter === "blur") {
+        blurFilter = value;
+    } else if (filter === "grayscale") {
+        grayscaleFilter = value;
+    } else if (filter === "sepia") {
+        sepiaFilter = value;
+    } else if (filter === "saturate") {
+        saturateFilter = value;
+    } else if (filter === "invert") {
+        invertFilter = value;
+    } else if (filter === "hue-rotate") {
+        hueFilter = value;
+    }
+
+    return `brightness(${brightnessFilter}) opacity(${opacityFilter}) contrast(${contrastFilter}%) blur(${blurFilter}px) grayscale(${grayscaleFilter}%) sepia(${sepiaFilter}) saturate(${saturateFilter}%) invert(${invertFilter}) hue-rotate(${hueFilter}deg)`;
+};
+
+
+const inputs = document.querySelectorAll("input[type=range]");
+console.log(inputs)
+for (let i = 0; i < inputs.length; i++)
+    inputs[i].oninput = (event) => {
+        imageContainer.style.filter = setFilter(inputs[i].id, event.target.value)
+    }
+
 // text aside
 
 // edición de texto inferior y superior 
@@ -82,8 +158,8 @@ brightness.addEventListener("change", handleChange)
 const toptxt = document.getElementById("toptxt");
 const btmtxt = document.getElementById("btmtxt");
 
-const txt1 = document.getElementById ("txt1");
-const txt2 = document.getElementById ("txt2");
+const txt1 = document.getElementById("txt1");
+const txt2 = document.getElementById("txt2");
 
 
 toptxt.addEventListener("keyup", () => {
@@ -101,21 +177,23 @@ const topCheck = document.getElementById("top-check");
 const btmCheck = document.getElementById("btm-check");
 
 
-    topCheck.addEventListener("click", () => {
-        console.log(topCheck.checked)
-        if(topCheck.checked) {
-           txt1.style.display = "none";
-        } else {
-        txt1.style.display = "flex";    }
-    });
+topCheck.addEventListener("click", () => {
+    console.log(topCheck.checked)
+    if (topCheck.checked) {
+        txt1.style.display = "none";
+    } else {
+        txt1.style.display = "flex";
+    }
+});
 
-    btmCheck.addEventListener("click", () => {
-        console.log(btmCheck.checked)
-        if(btmCheck.checked) {
-           txt2.style.display = "none";
-        } else {
-            txt2.style.display = "flex";    }
-    });
+btmCheck.addEventListener("click", () => {
+    console.log(btmCheck.checked)
+    if (btmCheck.checked) {
+        txt2.style.display = "none";
+    } else {
+        txt2.style.display = "flex";
+    }
+});
 
 // cambio de familia de fuente REVISAR, NO ANDA
 
