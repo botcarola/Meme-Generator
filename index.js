@@ -65,7 +65,6 @@ inputUrl.oninput = () => {
 }
 
 
-
 // Filters
 
 const brightness = document.getElementById("brightness");
@@ -107,7 +106,7 @@ const btmCheck = document.getElementById("btm-check");
         if(topCheck.checked) {
            txt1.style.display = "none";
         } else {
-        txt1.style.display = "block";    }
+        txt1.style.display = "flex";    }
     });
 
     btmCheck.addEventListener("click", () => {
@@ -115,7 +114,7 @@ const btmCheck = document.getElementById("btm-check");
         if(btmCheck.checked) {
            txt2.style.display = "none";
         } else {
-            txt2.style.display = "block";    }
+            txt2.style.display = "flex";    }
     });
 
 // cambio de familia de fuente
@@ -129,8 +128,27 @@ optionFont.addEventListener("change", () => {
     console.log(optionFont.value)  
 });
 
+// buttons textalign
              
+const textAlignLeft = document.getElementById("textalign-left")
+const textAlignCenter = document.getElementById("textalign-center")
+const textAlignRight = document.getElementById("textalign-right")
 
+textAlignLeft.onclick = () => {
+    txt1.style.justifyContent = "flex-start"
+    txt2.style.justifyContent = "flex-start"
+}
+
+textAlignCenter.onclick = () => {
+    txt1.style.justifyContent = "center"
+    txt2.style.justifyContent = "center"
+
+}
+
+textAlignRight.onclick = () => {
+    txt1.style.justifyContent = "flex-end"
+    txt2.style.justifyContent = "flex-end"
+}
 
 
 

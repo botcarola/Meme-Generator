@@ -26,42 +26,42 @@
 <main >
 <!-- header -->
 <header>
-    <h1 class="title">Meme Generator</h1>
-    <nav>
-        <ul class="nav-list">
-            <li class="nav-list-container">
-                <button class="button-image" id="button-image">
-                <i class="fas fa-file-image button-icon-text" aria-label="imagen"></i>
-                Image</button>
-            </li>
-            <li class="nav-list-container">
-                <button class="button-image" id ="button-text">
-                <i class="fas fa-font button-icon-text" aria-label="texto"></i>
-                Text </button>
-            </li>
-            <li class="nav-list-container">
-                <div class="button-mode">
-                    🌞 Light mode
-                </div>
-            </li>
-        </ul>
-    </nav>
+<h1 class="title">Meme Generator</h1>
+<nav>
+    <ul class="nav-list">
+        <li class="nav-list-container">
+            <button class="button-image" id="button-image">
+            <i class="fas fa-file-image button-icon-text" aria-label="imagen"></i>
+            Image</button>
+        </li>
+        <li class="nav-list-container">
+            <button class="button-image" id ="button-text">
+            <i class="fas fa-font button-icon-text" aria-label="texto"></i>
+            Text </button>
+        </li>
+        <li class="nav-list-container">
+            <div class="button-mode">
+                🌞 Light mode
+            </div>
+        </li>
+    </ul>
+</nav>
 
 </header>
 <!-- container -->    
 <div class="download-container" id="download-container">
-    <div class="main-container">
-        <div class="main-top" id="txt1">TOP TEXT</div>
-        <div class="main-center">
-            <img class="image-container" src="" id="image-container">
-        </div>
-        <div class="main-bottom" id="txt2">BOTTOM TEXT</div>
+<div class="main-container">
+    <div class="main-top" id="txt1">TOP TEXT</div>
+    <div class="main-center">
+        <img class="image-container" src="" id="image-container">
     </div>
+    <div class="main-bottom" id="txt2">BOTTOM TEXT</div>
+</div>
 
-    <button class="main-button" id="download-button">
-        <i class="fas fa-download button-icon-text"></i>
-        Download meme
-    </button>
+<button class="main-button" id="download-button">
+    <i class="fas fa-download button-icon-text"></i>
+    Download meme
+</button>
 
 
 
@@ -79,77 +79,77 @@
 
 <aside id="aside-image">
 <div class="div-image">
-    <form class="image-form">
-        <h2>IMAGE</h2>
+<form class="image-form">
+    <h2>IMAGE</h2>
 
-        <!-- form: url -->
+    <!-- form: url -->
 
-        <h3>URL</h3>
-        <label class="label-url" for="URL"></label>
-        <input class="url change-color" id="input-url" type="text">
+    <h3>URL</h3>
+    <label class="label-url" for="URL"></label>
+    <input class="url change-color" id="input-url" type="text">
 
-        <!-- form: color and select -->
+    <!-- form: color and select -->
 
-        <h3>BACKGROUND</h3>
+    <h3>BACKGROUND</h3>
 
-        <div class="custom-container">
-            <div class="custom-color change-color"><label     class="color-and-select" for="color">
-                    <input class="color" id="color" type="color" value="#ffffff">
-                    <span>#ffffff</span>
-            </div>
-
-            <select class="select-background change-color" name="select">
-                <option value="ninguno" selected>None</option>
-                <option value="aclarar">Bright</option>
-                <option value="oscurecer">Darken</option>
-                <option value="diferencia">Difference</option>
-                <option value="luminosidad">Luminosity</option>
-                <option value="multiplicar">Multiply</option>
-            </select>
-            </label>
-
+    <div class="custom-container">
+        <div class="custom-color change-color"><label     class="color-and-select" for="color">
+                <input class="color" id="color" type="color" value="#ffffff">
+                <span>#ffffff</span>
         </div>
-        <!-- form: filters -->
 
-        <h3>FILTER</h3>
+        <select class="select-background change-color" name="select">
+            <option value="ninguno" selected>None</option>
+            <option value="aclarar">Bright</option>
+            <option value="oscurecer">Darken</option>
+            <option value="diferencia">Difference</option>
+            <option value="luminosidad">Luminosity</option>
+            <option value="multiplicar">Multiply</option>
+        </select>
+        </label>
 
+    </div>
+    <!-- form: filters -->
 
-        <label for="brightness">BRIGHTNESS</label>
-        <input id="brightness" type="range" min="0" max="1" step="0.1" value="1">
-
-        <label for="opacity">OPACITY</label>
-        <input id="opacity" type="range" min="0" max="1" step="0.1" value="1">
-
-        <label for="contrast">CONTRAST</label>
-        <input id="contrast" type="range" min="100" max="1000" step="1" value="100">
-
-        <label for="blur">BLUR</label>
-        <input id="blur" type="range" min="0" max="10" step="0.1" value="0">
-
-        <label for="gray-scale">GRAY SCALE</label>
-        <input id="gray-scale" type="range" min="0" max="100" step="1" value="0">
-
-        <label for="sepia">SEPIA</label>
-        <input id="sepia" type="range" min="0" max="100" step="1" value="0">
-
-        <label for="HUE">HUE</label>
-        <input id="HUE" type="range" min="0" max="359" step="1" value="0">
-
-        <label for="saturation">SATURATION</label>
-        <input id="saturation" type="range" min="100" max="1000" step="10" value="100">
-
-        <label for="negative">NEGATIVE</label>
-        <input id="negative" type="range" min="0" max="1" step="0.1" value="0">
+    <h3>FILTER</h3>
 
 
-        <!-- form button reset -->
+    <label for="brightness">BRIGHTNESS</label>
+    <input id="brightness" type="range" min="0" max="1" step="0.1" value="1">
 
-        <button class="button-restored change-color">Reset Filters</button>
-                    
+    <label for="opacity">OPACITY</label>
+    <input id="opacity" type="range" min="0" max="1" step="0.1" value="1">
+
+    <label for="contrast">CONTRAST</label>
+    <input id="contrast" type="range" min="100" max="1000" step="1" value="100">
+
+    <label for="blur">BLUR</label>
+    <input id="blur" type="range" min="0" max="10" step="0.1" value="0">
+
+    <label for="gray-scale">GRAY SCALE</label>
+    <input id="gray-scale" type="range" min="0" max="100" step="1" value="0">
+
+    <label for="sepia">SEPIA</label>
+    <input id="sepia" type="range" min="0" max="100" step="1" value="0">
+
+    <label for="HUE">HUE</label>
+    <input id="HUE" type="range" min="0" max="359" step="1" value="0">
+
+    <label for="saturation">SATURATION</label>
+    <input id="saturation" type="range" min="100" max="1000" step="10" value="100">
+
+    <label for="negative">NEGATIVE</label>
+    <input id="negative" type="range" min="0" max="1" step="0.1" value="0">
+
+
+    <!-- form button reset -->
+
+    <button class="button-restored change-color">Reset Filters</button>
+                
 
                         
 
-    </form>
+</form>
 </div>
 </aside>
 
@@ -160,107 +160,108 @@
 <div class="div-image">
 <form class="image-form">
 
-    <h2>TEXT</h2>
+<h2>TEXT</h2>
 
-    <h3>SUPERIOR</h3>
-        <label>
-            <textarea class="fontbox" value="TOP TEXT" id="toptxt">
-            </textarea>   
-        </label> 
+<h3>SUPERIOR</h3>
+    <label>
+        <textarea class="fontbox" value="TOP TEXT" id="toptxt">
+        </textarea>   
+    </label> 
 
-        <div>
-            <input type="checkbox" id="top-check">
-            <label>No superior text</label>
-        </div> 
-
-    <h3>INFERIOR</h3>
-
-        <label>
-            <textarea class="fontbox" value="BOTTOM TEXT" id="btmtxt">
-            </textarea>
-        </label>            
-    
-        <div>
-            <input type="checkbox" id="btm-check">
-            <label>No inferior text</label>
-        </div>
-
-        <h3>FONT</h3>
-        <label for="optionfont"></label>
-        <select class="select-font" id="optionfont">
-                <option value="Arial">Arial</option>
-                <option value="Arial Black">Arial Black</option>
-                <option value="Impact">Impact</option>
-                <option value="Montserrat">Montserrat</option>
-                <option value="Comic Sans MS">Comic Sans MS</option>
-                <option value="Helvetica" class="Helvetica">Helvetica</option>
-                <option value="Freestyle Script">Freestyle Script</option>
-                <option value="Verdana">Verdana</option>
-        </select>
-    
-
-        
-    <label for="number"></label> 
-        <div class="div-input">         
-            <input id="number" type="number" class="input-number" value="40">
-            <button class="textalign-font"><i class="fas fa-align-left"></i></button>
-            <button class="textalign-font"><i class="fas fa-align-center"></i></button>
-            <button class="textalign-font"><i class="fas fa-align-right"></i></button>
-        </div>
-
-    <div class="div-input-color">
-
-    <div class="div-font-color">
-        <h3>FONT</h3>                 
-        <div class="custom-color change-color"><label class="color-and-select" for="color">                    
-            <input class="color" id="font-color" type="color" value="#ffffff">
-            <span>#ffffff</span>
-        </div> 
-        <label for="font-color"></label>
+    <div>
+        <input type="checkbox" id="top-check">
+        <label>No superior text</label>
     </div> 
 
-    <div class="div-font-color">
-        <h3>BACKGROUND</h3>
-        <div class="custom-color change-color"><label class="color-and-select" for="color">
-            <input class="color" id="back-color" type="color" value="#ffffff">
-            <span>#ffffff</span>
-        </div>
-        <label for="back-color"></label>
+<h3>INFERIOR</h3>
+
+    <label>
+        <textarea class="fontbox" value="BOTTOM TEXT" id="btmtxt">
+        </textarea>
+    </label>            
+
+    <div>
+        <input type="checkbox" id="btm-check">
+        <label>No inferior text</label>
     </div>
+
+    <h3>FONT</h3>
+    <label for="optionfont"></label>
+    <select class="select-font" id="optionfont">
+            <option value="Arial">Arial</option>
+            <option value="Arial Black">Arial Black</option>
+            <option value="Impact">Impact</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Helvetica" class="Helvetica">Helvetica</option>
+            <option value="Freestyle Script">Freestyle Script</option>
+            <option value="Verdana">Verdana</option>
+    </select>
+
+
+    
+<label for="number"></label> 
+    <div class="div-input">         
+        <input id="number" type="number" class="input-number" value="40">
+        <button type="button" id="textalign-left" class="textalign-font"><i class="fas fa-align-left"></i></button>
+        <button type="button" id="textalign-center" class="textalign-font"><i class="fas fa-align-center"></i></button>
+        <button type="button" id="textalign-right" class="textalign-font"><i class="fas fa-align-right"></i></button>
+    </div>
+
+<div class="div-input-color">
+
+<div class="div-font-color">
+    <h3>FONT</h3>                 
+    <div class="custom-color change-color"><label class="color-and-select" for="color">                    
+        <input class="color" id="font-color" type="color" value="#ffffff">
+        <span>#ffffff</span>
+    </div> 
+    <label for="font-color"></label>
+</div> 
+
+<div class="div-font-color">
+    <h3>BACKGROUND</h3>
+    <div class="custom-color change-color"><label class="color-and-select" for="color">
+        <input class="color" id="back-color" type="color" value="#ffffff">
+        <span>#ffffff</span>
+    </div>
+    <label for="back-color"></label>
+</div>
 </div> 
 
 
-    <label>
-    <input id="check-transparent" type="checkbox">
-    Transparent </label>
+<label>
+<input id="check-transparent" type="checkbox">
+Transparent 
+</label>
 
 
 
-    
-        <h3>OUTLINE</h3>
-    <div>
-        <button id="button1" class="boxes">None</button>
-        <button id="button2" class="boxes">Light</button>
-        <button id="button3" class="boxes">Dark</button>
-    </div>
-    <h3>SPACING</h3>
-    <label>
-        <input type="number" class="spacing-number" value="35">
-    </label>
-    <h3>LINE SPACING</h3>
-    <label>
-        <select class="select-font">
-            <option value="0.8">0.8</option>
-            <option value="1.0">1.0</option>
-            <option value="1.2">1.2</option>
-            <option value="1.5">1.5</option>
-            <option value="2.0">2.0</option>
-        </select>
-    </label>
+
+    <h3>OUTLINE</h3>
+<div>
+    <button id="button1" class="boxes">None</button>
+    <button id="button2" class="boxes">Light</button>
+    <button id="button3" class="boxes">Dark</button>
+</div>
+<h3>SPACING</h3>
+<label>
+    <input type="number" class="spacing-number" value="35">
+</label>
+<h3>LINE SPACING</h3>
+<label>
+    <select class="select-font">
+        <option value="0.8">0.8</option>
+        <option value="1.0">1.0</option>
+        <option value="1.2">1.2</option>
+        <option value="1.5">1.5</option>
+        <option value="2.0">2.0</option>
+    </select>
+</label>
 </form>
 </div>
 
-    
+
 
 <script src="index.js"></script>
 
