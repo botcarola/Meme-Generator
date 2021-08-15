@@ -16,8 +16,6 @@ else {
 }
 }
 
-
-
 // dowload meme
 
 const downloadMeme = document.getElementById("download-container");
@@ -33,14 +31,12 @@ domtoimage.toBlob(downloadMeme)
     })
 }
 
-
 // form  text/image button display none/block
 
 const asideImage = document.getElementById("aside-image")
 const asideText = document.getElementById("aside-text")
 const buttonImage = document.getElementById("button-image")
 const buttonText = document.getElementById("button-text")
-
 
 const openAsideImage = () => {
 asideImage.style.display = "block"
@@ -55,8 +51,6 @@ asideImage.style.display = "none"
 }
 
 buttonText.onclick = openAsideText
-
-
 
 // Image Panel 
 
@@ -104,7 +98,6 @@ else {
 }
 }
 
-
 // Filter 
 
 let brightnessFilter = 1;
@@ -116,7 +109,6 @@ let sepiaFilter = 0;
 let saturateFilter = 100;
 let invertFilter = 0;
 let hueFilter = 0;
-
 
 const setFilter = (filter, value) => {
 
@@ -143,15 +135,12 @@ if (filter === "brightness") {
 return `brightness(${brightnessFilter}) opacity(${opacityFilter}) contrast(${contrastFilter}%) blur(${blurFilter}px) grayscale(${grayscaleFilter}%) sepia(${sepiaFilter}) saturate(${saturateFilter}%) invert(${invertFilter}) hue-rotate(${hueFilter}deg)`;
 };
 
-
 const inputs = document.querySelectorAll("input[type=range]");
 console.log(inputs)
 for (let i = 0; i < inputs.length; i++)
 inputs[i].oninput = (event) => {
     imageContainer.style.filter = setFilter(inputs[i].id, event.target.value)
 }
-
-
 
 // text aside
 
@@ -168,7 +157,6 @@ toptxt.addEventListener("keyup", () => {
     txt1.innerHTML = toptxt.value;
 });
 
-
 btmtxt.addEventListener("keyup", () => {
     txt2.innerHTML = btmtxt.value;
 });
@@ -177,7 +165,6 @@ btmtxt.addEventListener("keyup", () => {
 
 const topCheck = document.getElementById("top-check");
 const btmCheck = document.getElementById("btm-check");
-
 
 topCheck.addEventListener("click", () => {
     console.log(topCheck.checked)
@@ -222,7 +209,6 @@ txt2.style.justifyContent = "flex-start"
 textAlignCenter.onclick = () => {
 txt1.style.justifyContent = "center"
 txt2.style.justifyContent = "center"
-
 }
 
 textAlignRight.onclick = () => {
@@ -257,10 +243,6 @@ backgroundColor.addEventListener('input', () =>{
     mainCenter.style.backgroundColor = backgroundColor.value
 })
 
-
-
-
-
 // button transparent
 
 const inputCheckTransparent = document.getElementById("check-transparent")
@@ -276,8 +258,3 @@ txt2.style.backgroundColor = inputBackgroundColorText.value
 
 }
 })
-
-
-    
-    
-
