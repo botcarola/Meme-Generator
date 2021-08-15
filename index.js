@@ -42,12 +42,12 @@ inputUrl.oninput = () => {
 
 const mainCenter = document.getElementById("main-center");
 const inputColor = document.getElementById("input-color");
-const colorHex = document.getElementById("color-hex"); 
+const colorHex = document.getElementById("color-hex");
 
 inputColor.oninput = () => {
     mainCenter.style.backgroundColor = (inputColor.value)
     colorHex.textContent = (inputColor.value)
-} 
+}
 
 //Mix Blend 
 
@@ -57,10 +57,10 @@ mixBlend.onchange = () => {
 
     if (mixBlend.value === "aclarar") {
         imageContainer.style.mixBlendMode = "lighten"
-    } 
+    }
     else if (mixBlend.value === "oscurecer") {
         imageContainer.style.mixBlendMode = "darken"
-    }     
+    }
     else if (mixBlend.value === "diferencia") {
         imageContainer.style.mixBlendMode = "difference"
     }
@@ -69,25 +69,57 @@ mixBlend.onchange = () => {
     }
     else if (mixBlend.value === "multiplicar") {
         imageContainer.style.mixBlendMode = "multiply"
-    } 
+    }
     else {
         imageContainer.style.mixBlendMode = ""
     }
 }
- 
 
-/* const mixBlend = document.getElementById("mix-blend");
-mixBlend.addEventListener("change", () =>{
-    mainCenter.style.backgroundBlendMode = mixBlend.value
-});  */
 
-// Filters
+// Filter 
 
-const brightness = document.getElementById("brightness");
-console.log(brightness)
+let brightnessFilter = 1;
+let opacityFilter = 1;
+let contrastFilter = 100;
+let blurFilter = 0;
+let grayscaleFilter = 0;
+let sepiaFilter = 0;
+let saturateFilter = 100;
+let invertFilter = 0;
+let hueFilter = 0;
 
-const handleChange = (event) => {
-    console.log(event.target.value)
-}
 
-brightness.addEventListener("change", handleChange)
+const setFilter = (filter, value) => {
+
+    if (filter === "brightness") {
+        brightnessFilter = value;
+    } else if (filter === "opacity") {
+        opacityFilter = value;
+    } else if (filter === "contrast") {
+        contrastFilter = value;
+    } else if (filter === "blur") {
+        blurFilter = value;
+    } else if (filter === "grayscale") {
+        grayscaleFilter = value;
+    } else if (filter === "sepia") {
+        sepiaFilter = value;
+    } else if (filter === "saturate") {
+        saturateFilter = value;
+    } else if (filter === "invert") {
+        invertFilter = value;
+    } else if (filter === "hue-rotate") {
+        hueFilter = value;
+    }
+
+    return `brightness(${brightnessFilter}) opacity(${opacityFilter}) contrast(${contrastFilter}%) blur(${blurFilter}px) grayscale(${grayscaleFilter}%) sepia(${sepiaFilter}) saturate(${saturateFilter}%) invert(${invertFilter}) hue-rotate(${hueFilter}deg)`;
+};
+
+
+const inputs = document.querySelectorAll("input[type=range]");
+console.log(inputs)
+for(let i = 0; i < inputs.length; i ++)
+    inputs[i].oninput = (event) => {
+        imageContainer.style.filter = setFilter(inputs[i].id, event.target.value)
+    }
+
+
