@@ -3,7 +3,6 @@
   outline: transparent;
 }
 
-
 body {
 margin: 0;
 padding: 0;
@@ -171,7 +170,7 @@ flex-direction: column;
 align-items: center;
 }
 
-.main-top{
+.main-top {
 color: #000;
 background-color: white;
 height: 20%;
@@ -185,7 +184,7 @@ font-weight: 900;
 z-index: 1000;
 }
 
-.main-bottom{
+.main-bottom {
 color: #000;
 background-color: white;
 height: 20%;
@@ -587,7 +586,7 @@ transition: 0.5s ease-out;
 width: 95%;
 height: 35px;
 background-color: #30343f;
-border: none;
+border: 1px solid #30343f;
 color: white;
 border-radius: 4px;
 padding-left: 10px;
