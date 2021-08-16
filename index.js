@@ -143,7 +143,6 @@ inputs[i].oninput = (event) => {
 imageContainer.style.filter = setFilter(inputs[i].id, event.target.value)
 }
 
-
 //Reset filter 
 
 const brightness = document.getElementById("brightness");
@@ -171,7 +170,6 @@ buttonRestored.onclick = () => {
     imageContainer.style.filter = "none";
 }
 
-
 // text aside
 
 // edición de texto inferior y superior 
@@ -181,7 +179,6 @@ const btmtxt = document.getElementById("btmtxt");
 
 const txt1 = document.getElementById("txt1");
 const txt2 = document.getElementById("txt2");
-
 
 toptxt.addEventListener("keyup", () => {
 txt1.innerHTML = toptxt.value;
@@ -265,7 +262,6 @@ inputNumberFont.oninput = () =>{
     txt1.style.fontSize = `${inputNumberFont.value}px` 
     txt2.style.fontSize = `${inputNumberFont.value}px`
 }
-
 
 // buttons textalign
         
@@ -361,7 +357,6 @@ txt1.style.textShadow = "2px 2px 2px #000000"
 txt2.style.textShadow = "2px 2px 2px #000000"
 }
 
-
 // button espaciado
 
 //const inputNumberSpacing = document.getElementById("number-spacing")
@@ -376,11 +371,8 @@ txt2.style.textShadow = "2px 2px 2px #000000"
 //const inputSelectLineSpacing = document.getElementById("select-font")
 //console.log(inputSelectLineSpacing)
 
-//inputSelectLineSpacing.addEventListener( 'change', () =>{
-  //  txt1.style.lineHeight = inputSelectLineSpacing.value
-    //txt2.style.lineHeight = inputSelectLineSpacing.value
-//}
-//)
-
-
-
+inputSelectLineSpacing.addEventListener( 'change', () =>{
+    txt1.style.lineHeight = inputSelectLineSpacing.value
+    txt2.style.lineHeight = inputSelectLineSpacing.value
+}
+)
