@@ -61,7 +61,6 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
                     </li>
                 </ul>
             </nav>
-
         </header>
 
         <!-- container -->
@@ -70,16 +69,15 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
             <div class="main-container" id="download-container">
                 <div class="main-top" id="txt1">TOP TEXT</div>
                 <div class="main-center" id="main-center">
-                    <img class="image-container" src="/image/defaultMeme.png" id="image-container">
+                    <img class="image-container" src="image/defaultMeme.png" id="image-container">
                 </div>
                 <div class="main-bottom" id="txt2">BOTTOM TEXT</div>
             </div>
-            <div class="main-bottom" id="txt2">BOTTOM TEXT</div>
-        </div>
-        <button class="main-button" id="download-button">
-            <i class="fas fa-download button-icon-text"></i>
-            Download meme
-        </button>
+            <button class="main-button" id="download-button">
+                <i class="fas fa-download button-icon-text"></i>
+                Download meme
+            </button>
+        </div>        
         <span id="loading-meme">⌛</span>
     </div>
     
@@ -127,31 +125,31 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
             <h3>FILTER</h3>
 
             <label for="brightness">BRIGHTNESS</label>
-            <input class="filter-range" id="brightness"  type="range" min="0" max="1" step="0.1" value="1">
+                <input class="filter-range" id="brightness"  type="range" min="0" max="1" step="0.1" value="1">
 
             <label for="opacity">OPACITY</label>
-            <input class="filter-range" id="opacity" type="range" min="0" max="1" step="0.1" value="1">
+                <input class="filter-range" id="opacity" type="range" min="0" max="1" step="0.1" value="1">
 
             <label for="contrast">CONTRAST</label>
-            <input class="filter-range" id="contrast" type="range" min="100" max="1000" step="1" value="100">
+                <input class="filter-range" id="contrast" type="range" min="100" max="1000" step="1" value="100">
 
             <label for="blur">BLUR</label>
-            <input class="filter-range" id="blur" type="range" min="0" max="10" step="0.1" value="0">
+                <input class="filter-range" id="blur" type="range" min="0" max="10" step="0.1" value="0">
 
             <label for="grayscale">GRAY SCALE</label>
-            <input class="filter-range" id="grayscale" type="range" min="0" max="100" step="1" value="0">
+                <input class="filter-range" id="grayscale" type="range" min="0" max="100" step="1" value="0">
 
             <label for="sepia">SEPIA</label>
-            <input class="filter-range" id="sepia" type="range" min="0" max="1" step="0.1" value="0">
+                <input class="filter-range" id="sepia" type="range" min="0" max="1" step="0.1" value="0">
 
             <label for="hue">HUE</label>
-            <input class="filter-range" id="hue-rotate" type="range" min="0" max="359" step="1" value="0">
+                <input class="filter-range" id="hue-rotate" type="range" min="0" max="359" step="1" value="0">
 
             <label for="saturate">SATURATION</label>
-            <input class="filter-range" id="saturate" type="range" min="100" max="1000" step="10" value="100">
+                <input class="filter-range" id="saturate" type="range" min="100" max="1000" step="10" value="100">
 
             <label for="invert">NEGATIVE</label>
-            <input class="filter-range" id="invert" type="range" min="0" max="1" step="0.1" value="0">
+                <input class="filter-range" id="invert" type="range" min="0" max="1" step="0.1" value="0">
 
             <!-- form button reset -->
             <button class="button-restored change-color">Reset Filters</button>
@@ -161,7 +159,8 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
 
 </aside>
 
-<!--ASIDE TEXTO-->
+
+<!--aside texto-->
 
 <aside class="aside-text" id="aside-text">
 
@@ -267,13 +266,10 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
                 </select>
             </label>
         </form>
-
     </div>
-
 </aside>
 
 <script src="index.js"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
 integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
 crossorigin="anonymous"></script>

@@ -364,7 +364,7 @@ txt2.style.textShadow = "2px 2px 2px #000000"
 
 // button espaciado
 
-const inputNumberSpacing = document.getElementById("number-spacing")
+//const inputNumberSpacing = document.getElementById("number-spacing")
 
 //inputNumberSpacing.oninput = () =>{
   //  txt1.style.lineHeight = `${inputNumberSpacing.value}px`
@@ -373,14 +373,14 @@ const inputNumberSpacing = document.getElementById("number-spacing")
 
 // select line spacing
 
-const inputSelectLineSpacing = document.getElementById("select-font")
-console.log(inputSelectLineSpacing)
+//const inputSelectLineSpacing = document.getElementById("select-font")
+//console.log(inputSelectLineSpacing)
 
-inputSelectLineSpacing.addEventListener( 'change', () =>{
-    txt1.style.lineHeight = inputSelectLineSpacing.value
-    txt2.style.lineHeight = inputSelectLineSpacing.value
-}
-)
+//inputSelectLineSpacing.addEventListener( 'change', () =>{
+  //  txt1.style.lineHeight = inputSelectLineSpacing.value
+    //txt2.style.lineHeight = inputSelectLineSpacing.value
+//}
+//)
 
 
 
