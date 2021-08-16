@@ -1,6 +1,8 @@
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: transparent;
 }
+
 
 body {
 margin: 0;
@@ -32,6 +34,15 @@ background-color: #252935;
 color: white;
 }
 
+.dark-mode .url:focus {
+  box-shadow: 0px 0px 7px #9b00ff;
+  transition: 0.5s ease-out;
+}
+
+.light-mode .change-color:focus {
+  background-color: #4e5565;
+}
+
 .dark-mode li:hover {
 background-color: #4e5565;
 cursor: pointer;
@@ -53,8 +64,8 @@ background-color: #eeeeee;
 }
 
 .light-mode aside {
-color: #424242;
-background-color: #bdb2b2;
+  color: #424242;
+  background-color: #e4e3f2;
 }
 
 .light-mode .change-color {
@@ -63,11 +74,15 @@ background-color: #e0e0e0;
 }
 
 .light-mode .change-color:hover {
-background-color: #b19bad;
+  background-color: #bea7e9
 }
 
 .light-mode .change-color:focus {
-background-color: #b19bad;
+  background-color: #bea7e9
+}
+
+.light-mode .button-image:focus {
+  background-color: #bdbdbd; 
 }
 
 .light-mode li:hover {
@@ -118,6 +133,10 @@ padding-left: 0;
 font-size: 15px;
 border-radius: 3px;
 padding: 5px;
+}
+
+.nav-list-container button {
+  padding: 5px;
 }
 
 .button-mode {
@@ -214,6 +233,10 @@ object-fit: cover;
 .button-image {
 border: none;
 background-color: transparent;
+}
+
+.button-image:focus {
+  background-color: #4e5565;
 }
 
 #loading-meme {
@@ -317,19 +340,32 @@ background: #00a498;
 cursor: pointer;
 }
 
-.url {
-background-color: #30343f;
-height: 35px;
-border: 1px solid #30343f;
-border-radius: 4px;
-padding-left: 5px;
-margin: 0;
+.filter-range:hover {
+box-shadow: 0 0 5px 1px #12c5b9; 
+transition: 100ms; 
+
 }
 
-.url:hover,
-.url:focus {
-background-color: #4e5565;
-transition: 0.5s ease-out;
+.filter-range:focus {
+background-color: #666972;  
+
+}
+ 
+/** FORM: URL **/
+
+.url {
+  background-color: #30343f;
+  height: 35px;
+  border: 1px solid #30343f;
+  border-radius: 4px;
+  padding-left: 5px;
+  margin: 0;
+  color: #00a498;
+}
+
+.url:hover {
+  background-color: #4e5565;
+  transition: 0.5s ease-out;
 }
 
 .color-and-select {
@@ -395,8 +431,9 @@ margin: 40px 0px;
 
 .button-restored:hover,
 .button-restored:focus {
-background-color: #4e5565;
-transition: 0.5s ease-out;
+  background-color: #4e5565;
+  transition: 0.5s ease-out;
+  box-shadow: 0px 0px 7px #9b00ff;
 }
 
 .button-reset {
