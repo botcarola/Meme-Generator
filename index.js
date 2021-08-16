@@ -144,12 +144,40 @@ const setFilter = (filter, value) => {
 };
 
 
-const inputs = document.querySelectorAll("input[type=range]");
-console.log(inputs)
+const inputs = document.querySelectorAll(".filter-range");
 for (let i = 0; i < inputs.length; i++)
     inputs[i].oninput = (event) => {
         imageContainer.style.filter = setFilter(inputs[i].id, event.target.value)
     }
+
+
+//Reset filter 
+
+const brightness = document.getElementById("brightness");
+const opacity = document.getElementById("opacity");
+const contrast = document.getElementById("contrast");
+const bluR = document.getElementById("blur");
+const grayscale = document.getElementById("grayscale");
+const sepia = document.getElementById("sepia");
+const hueRotate = document.getElementById("hue-rotate");
+const saturate = document.getElementById("saturate");
+const invert = document.getElementById("invert");
+const buttonRestored = document.querySelector(".button-restored");
+
+buttonRestored.onclick = () => {
+    brightness.value = 1;
+    opacity.value = 1;
+    contrast.value = 100;
+    bluR.value = 0;
+    grayscale.value = 0;
+    sepia.value = 0;
+    saturate.value = 100;
+    invert.value = 0;
+    hueRotate.value = 0;
+
+    imageContainer.style.filter = "none";
+}
+
 
 // text aside
 

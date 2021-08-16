@@ -1,6 +1,17 @@
 * {
   box-sizing: border-box;
+  outline: transparent;
 }
+
+/* button:focus,
+button:focus-visible,
+a:focus,
+a:focus-visible, 
+input:focus,
+input:focus-visible {
+  outline: transparent;
+  box-shadow: inset 0 0 0 1px;
+}  */
 
 body {
   margin: 0;
@@ -32,6 +43,15 @@ body {
   color: white;
 }
 
+.dark-mode .url:focus {
+  box-shadow: 0px 0px 7px #9b00ff;
+  transition: 0.5s ease-out;
+}
+
+.light-mode .change-color:focus {
+  background-color: #4e5565;
+}
+
 .dark-mode li:hover {
   background-color: #4e5565;
   cursor: pointer;
@@ -54,7 +74,7 @@ body {
 
 .light-mode aside {
   color: #424242;
-  background-color: #bdb2b2;
+  background-color: #e4e3f2;
 }
 
 .light-mode .change-color {
@@ -63,11 +83,15 @@ body {
 }
 
 .light-mode .change-color:hover {
-  background-color: #b19bad;
+  background-color: #bea7e9
 }
 
 .light-mode .change-color:focus {
-  background-color: #b19bad;
+  background-color: #bea7e9
+}
+
+.light-mode .button-image:focus {
+  background-color: #bdbdbd; 
 }
 
 .light-mode li:hover {
@@ -120,6 +144,10 @@ nav {
 .nav-list-container {
   font-size: 15px;
   border-radius: 3px;
+  padding: 5px;
+}
+
+.nav-list-container button {
   padding: 5px;
 }
 
@@ -201,6 +229,10 @@ main {
 .button-image {
   border: none;
   background-color: transparent;
+}
+
+.button-image:focus {
+  background-color: #4e5565;
 }
 
 #loading-meme {
@@ -317,6 +349,17 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
 }
 
+.filter-range:hover {
+box-shadow: 0 0 5px 1px #12c5b9; 
+transition: 100ms; 
+
+}
+
+.filter-range:focus {
+background-color: #666972;  
+
+}
+ 
 /** FORM: URL **/
 
 .url {
@@ -326,10 +369,10 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 4px;
   padding-left: 5px;
   margin: 0;
+  color: #00a498;
 }
 
-.url:hover,
-.url:focus {
+.url:hover {
   background-color: #4e5565;
   transition: 0.5s ease-out;
 }
@@ -407,6 +450,7 @@ input[type="range"]::-webkit-slider-thumb {
 .button-restored:focus {
   background-color: #4e5565;
   transition: 0.5s ease-out;
+  box-shadow: 0px 0px 7px #9b00ff;
 }
 
 /** FORM: BUTTON RESTORED **/
