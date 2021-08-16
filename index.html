@@ -74,13 +74,13 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
             </div>
             <div class="main-bottom" id="txt2">BOTTOM TEXT</div>
         </div>
-
         <button class="main-button" id="download-button">
             <i class="fas fa-download button-icon-text"></i>
             Download meme
         </button>
         <span id="loading-meme">⌛</span>
     </div>
+    
 
 </main>
 
@@ -209,7 +209,7 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
 
             <label for="number"></label>
             <div class="div-input">
-                <input id="number" type="number" class="input-number" value="40">
+                <input id="number" type="number" class="input-number" min="10" max="60" value="10">
                 <button type="button" id="textalign-left" class="textalign-font"><i
                         class="fas fa-align-left"></i></button>
                 <button type="button" id="textalign-center" class="textalign-font"><i
@@ -252,11 +252,11 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
             </div>
             <h3>SPACING</h3>
             <label>
-                <input type="number" class="spacing-number" value="35">
+                <input id="number-spacing" type="number" class="spacing-number" value="35" min="10" max="50"> 
             </label>
             <h3>LINE SPACING</h3>
             <label>
-                <select class="select-font">
+                <select id="select-font" class="select-font">
                     <option value="0.8">0.8</option>
                     <option value="1.0">1.0</option>
                     <option value="1.2">1.2</option>

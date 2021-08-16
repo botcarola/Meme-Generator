@@ -220,6 +220,7 @@ background-color: transparent;
 display: none;
 font-size: 50px;
 position: absolute;
+bottom: 20px;
 }
 
 @-webkit-keyframes flip-horizontal-bottom {

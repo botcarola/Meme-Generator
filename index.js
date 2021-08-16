@@ -184,7 +184,7 @@ if (btmCheck.checked) {
 }
 });
 
-// cambio de familia de fuente REVISAR, NO ANDA
+// cambio de familia de fuente 
 
 const optionFont = document.getElementById("optionfont")
 
@@ -226,6 +226,15 @@ else if (optionFont.value === "DGothic" ) {
     txt2.style.fontFamily = "DotGothic16"
 }
 })
+
+// tamaño de fuente
+
+const inputNumberFont = document.getElementById("number")
+
+inputNumberFont.oninput = () =>{
+    txt1.style.fontSize = `${inputNumberFont.value}px` 
+    txt2.style.fontSize = `${inputNumberFont.value}px`
+}
 
 
 // buttons textalign
@@ -289,8 +298,6 @@ txt2.style.backgroundColor = inputBackgroundColorText.value
 }
 })
 
-console.log(imageContainer) 
-
 inputCheckTransparent.addEventListener('change', () =>{
 
 if ( inputCheckTransparent.checked == true ){
@@ -309,8 +316,6 @@ const buttonNone = document.getElementById("button1")
 const buttonLight = document.getElementById("button2")
 const buttonDark = document.getElementById("button3")
 
-console.log(buttonNone)
-
 buttonNone.onclick = () =>{
 txt1.style.textShadow = "none"
 txt2.style.textShadow = "none"
@@ -325,5 +330,27 @@ buttonDark.onclick = () =>{
 txt1.style.textShadow = "2px 2px 2px #000000"
 txt2.style.textShadow = "2px 2px 2px #000000"
 }
+
+
+// button espaciado
+
+const inputNumberSpacing = document.getElementById("number-spacing")
+
+//inputNumberSpacing.oninput = () =>{
+  //  txt1.style.lineHeight = `${inputNumberSpacing.value}px`
+    //txt2.style.direction = `${inputNumberSpacing.value}px`
+//}
+
+// select line spacing
+
+const inputSelectLineSpacing = document.getElementById("select-font")
+console.log(inputSelectLineSpacing)
+
+inputSelectLineSpacing.addEventListener( 'change', () =>{
+    txt1.style.lineHeight = inputSelectLineSpacing.value
+    txt2.style.lineHeight = inputSelectLineSpacing.value
+}
+)
+
 
 
