@@ -38,6 +38,7 @@ const asideText = document.getElementById("aside-text")
 const buttonImage = document.getElementById("button-image")
 const buttonText = document.getElementById("button-text")
 
+
 const openAsideImage = () => {
 asideImage.style.display = "block"
 asideText.style.display = "none"
@@ -51,6 +52,20 @@ asideImage.style.display = "none"
 }
 
 buttonText.onclick = openAsideText
+
+// button close panel
+
+const closeButtonImage = document.getElementById("button-panel-img")
+const closeButtonText = document.getElementById("button-panel-text")
+
+closeButtonImage.onclick = () => {
+    console.log("me estas apretando")
+    asideImage.style.display = "none"
+}
+
+closeButtonText.onclick = () => {
+    asideText.style.display = "none"
+}
 
 // Image Panel 
 
@@ -371,8 +386,8 @@ txt2.style.textShadow = "2px 2px 2px #000000"
 //const inputSelectLineSpacing = document.getElementById("select-font")
 //console.log(inputSelectLineSpacing)
 
-inputSelectLineSpacing.addEventListener( 'change', () =>{
-    txt1.style.lineHeight = inputSelectLineSpacing.value
-    txt2.style.lineHeight = inputSelectLineSpacing.value
-}
-)
+// inputSelectLineSpacing.addEventListener( 'change', () =>{
+//     txt1.style.lineHeight = inputSelectLineSpacing.value
+//     txt2.style.lineHeight = inputSelectLineSpacing.value
+// }
+// )

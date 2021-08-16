@@ -43,10 +43,6 @@ color: white;
   transition: 0.5s ease-out;
 }
 
-.light-mode .change-color:focus {
-  background-color: #4e5565;
-}
-
 .dark-mode li:hover {
 background-color: #4e5565;
 cursor: pointer;
@@ -285,6 +281,17 @@ width: 18%;
 display: flex;
 }
 
+.button-close-panel{
+  color: #fff;
+  background-color: #252935;
+  border: none;
+  cursor: pointer;
+}
+
+.hide{
+  font-size: 50px;
+}
+
 .div-image {
 width: 100%;
 display: flex;
@@ -295,7 +302,6 @@ justify-content: center;
 width: 90%;
 display: flex;
 flex-direction: column;
-
 }
 
 h2 {
