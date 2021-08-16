@@ -3,23 +3,30 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
-    <link href="index.css" rel="stylesheet">
+<!-- CSS -->
+<link href="index.css" rel="stylesheet">
 
-    <title>Meme editor</title>
+<title>Meme editor</title>
 
-    <!-- FUENTE -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<!-- FUENTE -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 
-    <!-- ICONOS -->
-    <script src="https://kit.fontawesome.com/24bbe0d5d2.js" crossorigin="anonymous"></script>
+<!-- ICONOS -->
+<script src="https://kit.fontawesome.com/24bbe0d5d2.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body class="dark-mode">
@@ -67,209 +74,212 @@
                 </div>
                 <div class="main-bottom" id="txt2">BOTTOM TEXT</div>
             </div>
-
-            <button class="main-button" id="download-button">
-                <i class="fas fa-download button-icon-text"></i>
-                Download meme
-            </button>
-            <span id="loading-meme" class="flip-horizontal-bottom">⌛</span>
+            <div class="main-bottom" id="txt2">BOTTOM TEXT</div>
         </div>
 
-    </main>
+        <button class="main-button" id="download-button">
+            <i class="fas fa-download button-icon-text"></i>
+            Download meme
+        </button>
+        <span id="loading-meme">⌛</span>
+    </div>
 
-    <!-- aside image-->
+</main>
 
-    <aside id="aside-image">
+<!-- aside image-->
 
-        <div class="div-image">
-            <form class="image-form">
-                <h2>IMAGE</h2>
+<aside id="aside-image">
 
-                <!-- form: url -->
+    <div class="div-image">
+        <form class="image-form">
+            <h2>IMAGE</h2>
 
-                <h3>URL</h3>
-                <label class="label-url" for="URL"></label>
-                <input class="url change-color" id="input-url" type="text">
+            <!-- form: url -->
 
-                <!-- form: color and select -->
+            <h3>URL</h3>
+            <label class="label-url" for="URL"></label>
+            <input class="url change-color" id="input-url" type="text">
 
-                <h3>BACKGROUND</h3>
+            <!-- form: color and select -->
 
-                <div class="custom-container">
-                    <div class="custom-color change-color">
-                        <label class="color-and-select" for="color">
-                        <input class="color" id="input-color" type="color" value="#ffffff">
-                        <span id="color-hex">#FFFFFF</span>
-                    </div>
+            <h3>BACKGROUND</h3>
 
-                    <select class="select-background change-color" id="mix-blend" name="select">
-                        <option value="ninguno" selected>None</option>
-                        <option value="aclarar">Bright</option>
-                        <option value="oscurecer">Darken</option>
-                        <option value="diferencia">Difference</option>
-                        <option value="luminosidad">Luminosity</option>
-                        <option value="multiplicar">Multiply</option>
-                    </select>
-
+            <div class="custom-container">
+                <div class="custom-color change-color">
+                    <label class="color-and-select" for="color">
+                    <input class="color" id="input-color" type="color" value="#ffffff">
+                    <span id="color-hex">#FFFFFF</span>
                 </div>
 
-                <!-- form: filters -->
-
-                <h3>FILTER</h3>
-
-                <label for="brightness">BRIGHTNESS</label>
-                <input class="filter-range" id="brightness" type="range" min="0" max="1" step="0.1" value="1">
-
-                <label for="opacity">OPACITY</label>
-                <input class="filter-range" id="opacity" type="range" min="0" max="1" step="0.1" value="1">
-
-                <label for="contrast">CONTRAST</label>
-                <input class="filter-range" id="contrast" type="range" min="100" max="1000" step="1" value="100">
-
-                <label for="blur">BLUR</label>
-                <input class="filter-range" id="blur" type="range" min="0" max="10" step="0.1" value="0">
-
-                <label for="grayscale">GRAY SCALE</label>
-                <input class="filter-range" id="grayscale" type="range" min="0" max="100" step="1" value="0">
-
-                <label for="sepia">SEPIA</label>
-                <input class="filter-range" id="sepia" type="range" min="0" max="1" step="0.1" value="0">
-
-                <label for="hue">HUE</label>
-                <input class="filter-range" id="hue-rotate" type="range" min="0" max="359" step="1" value="0">
-
-                <label for="saturate">SATURATION</label>
-                <input class="filter-range" id="saturate" type="range" min="100" max="1000" step="10" value="100">
-
-                <label for="invert">NEGATIVE</label>
-                <input class="filter-range" id="invert" type="range" min="0" max="1" step="0.1" value="0">
-
-                <!-- form button reset -->
-                <button type="button" class="button-restored change-color">Reset Filters</button>
-
-            </form>
-        </div>
-
-    </aside>
-
-    <!--ASIDE TEXTO-->
-
-    <aside class="aside-text" id="aside-text">
-
-        <div class="div-image">
-            <form class="image-form">
-
-                <h2>TEXT</h2>
-
-                <h3>SUPERIOR</h3>
-                <label>
-                    <textarea class="fontbox" value="TOP TEXT" id="toptxt">
-                    </textarea>
-                </label>
-
-                <div>
-                    <input type="checkbox" id="top-check">
-                    <label>No superior text</label>
-                </div>
-
-                <h3>INFERIOR</h3>
-
-                <label>
-                    <textarea class="fontbox" value="BOTTOM TEXT" id="btmtxt">
-                    </textarea>
-                </label>
-
-                <div>
-                    <input type="checkbox" id="btm-check">
-                    <label>No inferior text</label>
-                </div>
-
-                <h3>FONT</h3>
-
-                <label for="optionfont"></label>
-
-                <select class="select-font" id="optionfont">
-                    <option value="Arial">Arial</option>
-                    <option value="Arial Black">Arial Black</option>
-                    <option value="Impact">Impact</option>
-                    <option value="Montserrat">Montserrat</option>
-                    <option value="Comic Sans MS">Comic Sans MS</option>
-                    <option value="Helvetica" class="Helvetica">Helvetica</option>
-                    <option value="Freestyle Script">Freestyle Script</option>
-                    <option value="Verdana">Verdana</option>
+                <select class="select-background change-color" id="mix-blend" name="select">
+                    <option value="ninguno" selected>None</option>
+                    <option value="aclarar">Bright</option>
+                    <option value="oscurecer">Darken</option>
+                    <option value="diferencia">Difference</option>
+                    <option value="luminosidad">Luminosity</option>
+                    <option value="multiplicar">Multiply</option>
                 </select>
 
-                <label for="number"></label>
-                <div class="div-input">
-                    <input id="number" type="number" class="input-number" value="40">
-                    <button type="button" id="textalign-left" class="textalign-font"><i
-                            class="fas fa-align-left"></i></button>
-                    <button type="button" id="textalign-center" class="textalign-font"><i
-                            class="fas fa-align-center"></i></button>
-                    <button type="button" id="textalign-right" class="textalign-font"><i
-                            class="fas fa-align-right"></i></button>
-                </div>
+            </div>
 
-                <div class="div-input-color">
+            <!-- form: filters -->
 
-                    <div class="div-font-color">
-                        <h3>FONT</h3>
-                        <div class="custom-color change-color"><label class="color-and-select" for="color">
-                            <input class="color" id="font-color" type="color" value="#ffffff">
-                            <span>#ffffff</span>
-                        </div>
-                        <label for="font-color"></label>
+            <h3>FILTER</h3>
+
+            <label for="brightness">BRIGHTNESS</label>
+            <input class="filter-range" id="brightness"  type="range" min="0" max="1" step="0.1" value="1">
+
+            <label for="opacity">OPACITY</label>
+            <input class="filter-range" id="opacity" type="range" min="0" max="1" step="0.1" value="1">
+
+            <label for="contrast">CONTRAST</label>
+            <input class="filter-range" id="contrast" type="range" min="100" max="1000" step="1" value="100">
+
+            <label for="blur">BLUR</label>
+            <input class="filter-range" id="blur" type="range" min="0" max="10" step="0.1" value="0">
+
+            <label for="grayscale">GRAY SCALE</label>
+            <input class="filter-range" id="grayscale" type="range" min="0" max="100" step="1" value="0">
+
+            <label for="sepia">SEPIA</label>
+            <input class="filter-range" id="sepia" type="range" min="0" max="1" step="0.1" value="0">
+
+            <label for="hue">HUE</label>
+            <input class="filter-range" id="hue-rotate" type="range" min="0" max="359" step="1" value="0">
+
+            <label for="saturate">SATURATION</label>
+            <input class="filter-range" id="saturate" type="range" min="100" max="1000" step="10" value="100">
+
+            <label for="invert">NEGATIVE</label>
+            <input class="filter-range" id="invert" type="range" min="0" max="1" step="0.1" value="0">
+
+            <!-- form button reset -->
+            <button class="button-restored change-color">Reset Filters</button>
+
+        </form>
+    </div>
+
+</aside>
+
+<!--ASIDE TEXTO-->
+
+<aside class="aside-text" id="aside-text">
+
+    <div class="div-image">
+        <form class="image-form">
+
+            <h2>TEXT</h2>
+
+            <h3>SUPERIOR</h3>
+            <label>
+                <textarea class="fontbox" value="TOP TEXT" id="toptxt">
+                </textarea>
+            </label>
+
+            <div>
+                <input type="checkbox" id="top-check">
+                <label>No superior text</label>
+            </div>
+
+            <h3>INFERIOR</h3>
+
+            <label>
+                <textarea class="fontbox" value="BOTTOM TEXT" id="btmtxt">
+                </textarea>
+            </label>
+
+            <div>
+                <input type="checkbox" id="btm-check">
+                <label>No inferior text</label>
+            </div>
+
+            <h3>FONT</h3>
+
+            <label for="optionfont"></label>
+
+            <select class="select-font" id="optionfont">
+                <option value="Arial">Arial</option>
+                <option value="Montserrat">Montserrat</option>
+                <option value="American">American Typewriter</option>
+                <option value="Monospace">Monospace</option>
+                <option value="Comic Sans MS" selected>Comic Sans MS</option>
+                <option value="Comic Neue">Comic Neue</option>
+                <option value="Impact">Impact</option>
+                <option value="Verdana">Verdana</option>
+                <option value="DGothic">Dot Gothic</option>                   
+            </select>
+
+            <label for="number"></label>
+            <div class="div-input">
+                <input id="number" type="number" class="input-number" value="40">
+                <button type="button" id="textalign-left" class="textalign-font"><i
+                        class="fas fa-align-left"></i></button>
+                <button type="button" id="textalign-center" class="textalign-font"><i
+                        class="fas fa-align-center"></i></button>
+                <button type="button" id="textalign-right" class="textalign-font"><i
+                        class="fas fa-align-right"></i></button>
+            </div>
+
+            <div class="div-input-color">
+
+                <div class="div-font-color">
+                    <h3>FONT</h3>
+                    <div class="custom-color change-color"><label class="color-and-select" for="color">
+                        <input class="color" id="font-color" type="color" value="#ffffff">
+                        <span>#ffffff</span>
                     </div>
+                    <label for="font-color"></label>
+                </div>
 
-                    <div class="div-font-color">
-                        <h3>BACKGROUND</h3>
-                        <div class="custom-color change-color"><label class="color-and-select" for="color">
-                            <input class="color" id="back-color" type="color" value="#ffffff">
-                            <span>#ffffff</span>
-                        </div>
-                        <label for="back-color"></label>
+                <div class="div-font-color">
+                    <h3>BACKGROUND</h3>
+                    <div class="custom-color change-color"><label class="color-and-select" for="color">
+                        <input class="color" id="back-color" type="color" value="#ffffff">
+                        <span>#ffffff</span>
                     </div>
+                    <label for="back-color"></label>
                 </div>
+            </div>
 
-                <label>
-                    <input id="check-transparent" type="checkbox">
-                    Transparent
-                </label>
+            <label>
+                <input id="check-transparent" type="checkbox">
+                Transparent
+            </label>
 
-                <h3>OUTLINE</h3>
-                <div>
-                    <button id="button1" class="boxes">None</button>
-                    <button id="button2" class="boxes">Light</button>
-                    <button id="button3" class="boxes">Dark</button>
-                </div>
-                <h3>SPACING</h3>
-                <label>
-                    <input type="number" class="spacing-number" value="35">
-                </label>
-                <h3>LINE SPACING</h3>
-                <label>
-                    <select class="select-font">
-                        <option value="0.8">0.8</option>
-                        <option value="1.0">1.0</option>
-                        <option value="1.2">1.2</option>
-                        <option value="1.5">1.5</option>
-                        <option value="2.0">2.0</option>
-                    </select>
-                </label>
-            </form>
+            <h3>OUTLINE</h3>
+            <div>
+                <button id="button1" type="button" class="boxes">None</button>
+                <button id="button2" type="button" class="boxes">Light</button>
+                <button id="button3" type="button" class="boxes">Dark</button>
+            </div>
+            <h3>SPACING</h3>
+            <label>
+                <input type="number" class="spacing-number" value="35">
+            </label>
+            <h3>LINE SPACING</h3>
+            <label>
+                <select class="select-font">
+                    <option value="0.8">0.8</option>
+                    <option value="1.0">1.0</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2.0">2.0</option>
+                </select>
+            </label>
+        </form>
 
-        </div>
+    </div>
 
-    </aside>
+</aside>
 
-    <script src="index.js"></script>
+<script src="index.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
-    integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
-    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
-    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+crossorigin="anonymous"></script>
 
 </body>
 

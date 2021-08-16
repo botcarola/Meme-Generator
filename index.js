@@ -9,10 +9,10 @@ darkMode.classList.toggle("dark-mode")
 darkMode.classList.toggle("light-mode")
 
 if (darkMode.classList.contains("dark-mode")) {
-    buttonMode.textContent = "🌞 Light mode"
+buttonMode.textContent = "🌞 Light mode"
 }
 else {
-    buttonMode.textContent = "🌙 Dark mode"
+buttonMode.textContent = "🌙 Dark mode"
 }
 }
 
@@ -25,10 +25,10 @@ const loadingMeme = document.getElementById("loading-meme");
 downloadButton.onclick = () => {
 loadingMeme.style.display = "block";
 domtoimage.toBlob(downloadMeme)
-    .then(function (blob) {
-        window.saveAs(blob, 'Your_Meme.png');
-        loadingMeme.style.display = "none";
-    })
+.then(function (blob) {
+    window.saveAs(blob, 'Your_Meme.png');
+    loadingMeme.style.display = "none";
+})
 }
 
 // form  text/image button display none/block
@@ -79,22 +79,22 @@ const mixBlend = document.getElementById("mix-blend"); //id de select
 mixBlend.onchange = () => {
 
 if (mixBlend.value === "aclarar") {
-    imageContainer.style.mixBlendMode = "lighten"
+imageContainer.style.mixBlendMode = "lighten"
 }
 else if (mixBlend.value === "oscurecer") {
-    imageContainer.style.mixBlendMode = "darken"
+imageContainer.style.mixBlendMode = "darken"
 }
 else if (mixBlend.value === "diferencia") {
-    imageContainer.style.mixBlendMode = "difference"
+imageContainer.style.mixBlendMode = "difference"
 }
 else if (mixBlend.value === "luminosidad") {
-    imageContainer.style.mixBlendMode = "luminosity"
+imageContainer.style.mixBlendMode = "luminosity"
 }
 else if (mixBlend.value === "multiplicar") {
-    imageContainer.style.mixBlendMode = "multiply"
+imageContainer.style.mixBlendMode = "multiply"
 }
 else {
-    imageContainer.style.mixBlendMode = ""
+imageContainer.style.mixBlendMode = ""
 }
 }
 
@@ -113,23 +113,23 @@ let hueFilter = 0;
 const setFilter = (filter, value) => {
 
 if (filter === "brightness") {
-    brightnessFilter = value;
+brightnessFilter = value;
 } else if (filter === "opacity") {
-    opacityFilter = value;
+opacityFilter = value;
 } else if (filter === "contrast") {
-    contrastFilter = value;
+contrastFilter = value;
 } else if (filter === "blur") {
-    blurFilter = value;
+blurFilter = value;
 } else if (filter === "grayscale") {
-    grayscaleFilter = value;
+grayscaleFilter = value;
 } else if (filter === "sepia") {
-    sepiaFilter = value;
+sepiaFilter = value;
 } else if (filter === "saturate") {
-    saturateFilter = value;
+saturateFilter = value;
 } else if (filter === "invert") {
-    invertFilter = value;
+invertFilter = value;
 } else if (filter === "hue-rotate") {
-    hueFilter = value;
+hueFilter = value;
 }
 
 return `brightness(${brightnessFilter}) opacity(${opacityFilter}) contrast(${contrastFilter}%) blur(${blurFilter}px) grayscale(${grayscaleFilter}%) sepia(${sepiaFilter}) saturate(${saturateFilter}%) invert(${invertFilter}) hue-rotate(${hueFilter}deg)`;
@@ -140,7 +140,7 @@ const inputs = document.querySelectorAll(".filter-range");
 
 for (let i = 0; i < inputs.length; i++)
 inputs[i].oninput = (event) => {
-    imageContainer.style.filter = setFilter(inputs[i].id, event.target.value)
+imageContainer.style.filter = setFilter(inputs[i].id, event.target.value)
 }
 
 
@@ -184,11 +184,11 @@ const txt2 = document.getElementById("txt2");
 
 
 toptxt.addEventListener("keyup", () => {
-    txt1.innerHTML = toptxt.value;
+txt1.innerHTML = toptxt.value;
 });
 
 btmtxt.addEventListener("keyup", () => {
-    txt2.innerHTML = btmtxt.value;
+txt2.innerHTML = btmtxt.value;
 });
 
 // remoción de texto superior e inferior 
@@ -197,36 +197,69 @@ const topCheck = document.getElementById("top-check");
 const btmCheck = document.getElementById("btm-check");
 
 topCheck.addEventListener("click", () => {
-    console.log(topCheck.checked)
-    if (topCheck.checked) {
-        txt1.style.display = "none";
-    } else {
-        txt1.style.display = "flex";
-    }
+console.log(topCheck.checked)
+if (topCheck.checked) {
+    txt1.style.display = "none";
+} else {
+    txt1.style.display = "flex";
+}
 });
 
 btmCheck.addEventListener("click", () => {
-    console.log(btmCheck.checked)
-    if (btmCheck.checked) {
-        txt2.style.display = "none";
-    } else {
-        txt2.style.display = "flex";
-    }
+console.log(btmCheck.checked)
+if (btmCheck.checked) {
+    txt2.style.display = "none";
+} else {
+    txt2.style.display = "flex";
+}
 });
 
 // cambio de familia de fuente REVISAR, NO ANDA
 
 const optionFont = document.getElementById("optionfont")
 
-optionFont.addEventListener("change", () => {
-txt1.style.fontFamily = '${optionFont.value}';
-txt1.style.fontFamily = "Impact"; 
+optionFont.addEventListener('change', () =>{
+if ( optionFont.value === "Arial"){
+    txt1.style.fontFamily = "Arial, Helvetica, sans-serif"
+    txt2.style.fontFamily = "Arial, Helvetica, sans-serif"
+}
+else if ( optionFont.value === "Montserrat"){
+    txt1.style.fontFamily = "Montserrat"
+    txt2.style.fontFamily = "Montserrat"       
+}
+else if (optionFont.value === "American" ) {
+    txt1.style.fontFamily = "American Typewriter"
+    txt2.style.fontFamily = "American Typewriter"
+}
+else if (optionFont.value === "Monospace" ) {
+    txt1.style.fontFamily = "monospace"
+    txt2.style.fontFamily = "monospace"
+}
+else if (optionFont.value === "Comic Sans MS" ) {
+    txt1.style.fontFamily = "Comic Sans MS"
+    txt2.style.fontFamily = "Comic Sans MS"
+}
+else if (optionFont.value === "Comic Neue" ) {
+    txt1.style.fontFamily = "Comic Neue"
+    txt2.style.fontFamily = "Comic Neue"
+}
+else if (optionFont.value === "Impact" ) {
+    txt1.style.fontFamily = "Impact"
+    txt2.style.fontFamily = "Impact"
+}
+else if (optionFont.value === "Verdana" ) {
+    txt1.style.fontFamily = "Verdana"
+    txt2.style.fontFamily = "Verdana"
+}
+else if (optionFont.value === "DGothic" ) {
+    txt1.style.fontFamily = "DotGothic16"
+    txt2.style.fontFamily = "DotGothic16"
+}
+})
 
-console.log(optionFont.value)  
-});
 
 // buttons textalign
-            
+        
 const textAlignLeft = document.getElementById("textalign-left")
 const textAlignCenter = document.getElementById("textalign-center")
 const textAlignRight = document.getElementById("textalign-right")
@@ -260,17 +293,15 @@ txt2.style.color = inputColorText.value
 const inputBackgroundColorText = document.getElementById("back-color")
 
 inputBackgroundColorText.addEventListener('input', () =>{
-    txt1.style.backgroundColor = inputBackgroundColorText.value
-    txt2.style.backgroundColor = inputBackgroundColorText.value
+txt1.style.backgroundColor = inputBackgroundColorText.value
+txt2.style.backgroundColor = inputBackgroundColorText.value
 })
 
 // background image div principal
 const backgroundColor = document.getElementById("input-color")
-console.log(backgroundColor)
-console.log(mainCenter)
 
 backgroundColor.addEventListener('input', () =>{
-    mainCenter.style.backgroundColor = backgroundColor.value
+mainCenter.style.backgroundColor = backgroundColor.value
 })
 
 // button transparent
@@ -279,12 +310,50 @@ const inputCheckTransparent = document.getElementById("check-transparent")
 inputCheckTransparent.addEventListener('change', () =>{
 
 if ( inputCheckTransparent.checked == true ){
-    txt1.style.backgroundColor = backgroundColor.value
-    txt2.style.backgroundColor = backgroundColor.value
+txt1.style.backgroundColor = backgroundColor.value
+txt2.style.backgroundColor = backgroundColor.value
 } 
 else if ( inputCheckTransparent.checked == false){
-    txt1.style.backgroundColor = inputBackgroundColorText.value
+txt1.style.backgroundColor = inputBackgroundColorText.value
 txt2.style.backgroundColor = inputBackgroundColorText.value
-
 }
 })
+
+console.log(imageContainer) 
+
+inputCheckTransparent.addEventListener('change', () =>{
+
+if ( inputCheckTransparent.checked == true ){
+txt1.style.backgroundColor = "transparent"   
+txt2.style.backgroundColor = "transparent"     
+} 
+else if ( inputCheckTransparent.checked == false){
+txt1.style.backgroundColor = "white"
+txt2.style.backgroundColor = "white"    
+}
+})
+
+// button outline
+
+const buttonNone = document.getElementById("button1")
+const buttonLight = document.getElementById("button2")
+const buttonDark = document.getElementById("button3")
+
+console.log(buttonNone)
+
+buttonNone.onclick = () =>{
+txt1.style.textShadow = "none"
+txt2.style.textShadow = "none"
+}
+
+buttonLight.onclick = () =>{
+txt1.style.textShadow = "2px 2px 4px #FFFFFF"
+txt2.style.textShadow = "2px 2px 4px #FFFFFF"
+}
+
+buttonDark.onclick = () =>{
+txt1.style.textShadow = "2px 2px 2px #000000"
+txt2.style.textShadow = "2px 2px 2px #000000"
+}
+
+
