@@ -23,22 +23,29 @@
 </head>
 
 <body class="dark-mode">
+
     <!-- main -->
+
     <main>
+
         <!-- header -->
+
         <header>
+
             <h1 class="title">Meme Generator</h1>
             <nav>
                 <ul class="nav-list">
                     <li class="nav-list-container">
                         <button class="button-image" id="button-image">
                             <i class="fas fa-file-image button-icon-text" aria-label="imagen"></i>
-                            Image</button>
+                            Image
+                        </button>
                     </li>
                     <li class="nav-list-container">
                         <button class="button-image" id="button-text">
                             <i class="fas fa-font button-icon-text" aria-label="texto"></i>
-                            Text </button>
+                            Text 
+                        </button>
                     </li>
                     <li class="nav-list-container">
                         <div class="button-mode">
@@ -49,12 +56,14 @@
             </nav>
 
         </header>
+
         <!-- container -->
+
         <div class="download-container">
             <div class="main-container" id="download-container">
                 <div class="main-top" id="txt1">TOP TEXT</div>
                 <div class="main-center" id="main-center">
-                    <img class="image-container" src="/image/defaultMeme.png" id="image-container">
+                    <img class="image-container" src="" id="image-container">
                 </div>
                 <div class="main-bottom" id="txt2">BOTTOM TEXT</div>
             </div>
@@ -65,13 +74,13 @@
             </button>
             <span id="loading-meme" class="flip-horizontal-bottom">⌛</span>
         </div>
+
     </main>
-
-
 
     <!-- aside image-->
 
     <aside id="aside-image">
+
         <div class="div-image">
             <form class="image-form">
                 <h2>IMAGE</h2>
@@ -87,9 +96,10 @@
                 <h3>BACKGROUND</h3>
 
                 <div class="custom-container">
-                    <div class="custom-color change-color"><label class="color-and-select" for="color">
-                            <input class="color" id="input-color" type="color" value="#ffffff">
-                            <span id="color-hex">#FFFFFF</span>
+                    <div class="custom-color change-color">
+                        <label class="color-and-select" for="color">
+                        <input class="color" id="input-color" type="color" value="#ffffff">
+                        <span id="color-hex">#FFFFFF</span>
                     </div>
 
                     <select class="select-background change-color" id="mix-blend" name="select">
@@ -100,9 +110,9 @@
                         <option value="luminosidad">Luminosity</option>
                         <option value="multiplicar">Multiply</option>
                     </select>
-                    </label>
 
                 </div>
+
                 <!-- form: filters -->
 
                 <h3>FILTER</h3>
@@ -137,9 +147,9 @@
                 <!-- form button reset -->
                 <button type="button" class="button-restored change-color">Reset Filters</button>
 
-
             </form>
         </div>
+
     </aside>
 
     <!--ASIDE TEXTO-->
@@ -154,7 +164,7 @@
                 <h3>SUPERIOR</h3>
                 <label>
                     <textarea class="fontbox" value="TOP TEXT" id="toptxt">
-        </textarea>
+                    </textarea>
                 </label>
 
                 <div>
@@ -166,7 +176,7 @@
 
                 <label>
                     <textarea class="fontbox" value="BOTTOM TEXT" id="btmtxt">
-        </textarea>
+                    </textarea>
                 </label>
 
                 <div>
@@ -175,7 +185,9 @@
                 </div>
 
                 <h3>FONT</h3>
+
                 <label for="optionfont"></label>
+
                 <select class="select-font" id="optionfont">
                     <option value="Arial">Arial</option>
                     <option value="Arial Black">Arial Black</option>
@@ -186,8 +198,6 @@
                     <option value="Freestyle Script">Freestyle Script</option>
                     <option value="Verdana">Verdana</option>
                 </select>
-
-
 
                 <label for="number"></label>
                 <div class="div-input">
@@ -205,8 +215,8 @@
                     <div class="div-font-color">
                         <h3>FONT</h3>
                         <div class="custom-color change-color"><label class="color-and-select" for="color">
-                                <input class="color" id="font-color" type="color" value="#ffffff">
-                                <span>#ffffff</span>
+                            <input class="color" id="font-color" type="color" value="#ffffff">
+                            <span>#ffffff</span>
                         </div>
                         <label for="font-color"></label>
                     </div>
@@ -214,21 +224,17 @@
                     <div class="div-font-color">
                         <h3>BACKGROUND</h3>
                         <div class="custom-color change-color"><label class="color-and-select" for="color">
-                                <input class="color" id="back-color" type="color" value="#ffffff">
-                                <span>#ffffff</span>
+                            <input class="color" id="back-color" type="color" value="#ffffff">
+                            <span>#ffffff</span>
                         </div>
                         <label for="back-color"></label>
                     </div>
                 </div>
 
-
                 <label>
                     <input id="check-transparent" type="checkbox">
                     Transparent
                 </label>
-
-
-
 
                 <h3>OUTLINE</h3>
                 <div>
@@ -251,18 +257,19 @@
                     </select>
                 </label>
             </form>
+
         </div>
 
+    </aside>
 
+    <script src="index.js"></script>
 
-        <script src="index.js"></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
-            integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
-            integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
-            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+    integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous"></script>
 
 </body>
 
