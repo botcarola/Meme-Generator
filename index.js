@@ -59,7 +59,6 @@ const closeButtonImage = document.getElementById("button-panel-img")
 const closeButtonText = document.getElementById("button-panel-text")
 
 closeButtonImage.onclick = () => {
-    console.log("me estas apretando")
     asideImage.style.display = "none"
 }
 
@@ -209,7 +208,6 @@ const topCheck = document.getElementById("top-check");
 const btmCheck = document.getElementById("btm-check");
 
 topCheck.addEventListener("click", () => {
-console.log(topCheck.checked)
 if (topCheck.checked) {
     txt1.style.display = "none";
 } else {
@@ -218,7 +216,6 @@ if (topCheck.checked) {
 });
 
 btmCheck.addEventListener("click", () => {
-console.log(btmCheck.checked)
 if (btmCheck.checked) {
     txt2.style.display = "none";
 } else {
@@ -374,12 +371,11 @@ txt2.style.textShadow = "2px 2px 2px #000000"
 
 // button espaciado
 
-//const inputNumberSpacing = document.getElementById("number-spacing")
+/* const inputNumberSpacing = document.getElementById("number-spacing")
 
-//inputNumberSpacing.oninput = () =>{
-  //  txt1.style.lineHeight = `${inputNumberSpacing.value}px`
-    //txt2.style.direction = `${inputNumberSpacing.value}px`
-//}
+inputNumberSpacing.oninput = () =>{
+    
+} */
 
 // select line spacing
 

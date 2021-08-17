@@ -278,7 +278,6 @@ animation: flip-horizontal-bottom 1s cubic-bezier(0.455, 0.03, 0.515, 0.955)
 
 aside {
 width: 18%;
-display: flex;
 }
 
 .button-close {
@@ -609,3 +608,61 @@ background-color: #4e5565;
 transition: 0.5s ease-out;
 }
 
+ /* responsive time */
+
+                                          /* responsive boton hide */
+
+@media screen and (min-width: 1300px){
+
+  .button-close {
+    display: none;
+  }
+
+}
+
+                                          /* responsive max 1300px */
+
+@media screen and (max-width: 1550px){
+
+  /* aside img & text*/
+
+  aside {
+    width: 30%;
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1300px){
+
+  /* aside img & text*/
+
+  aside {
+    width: 40%;
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1100px){
+
+  /* aside img & text*/
+
+  aside {
+    width: 50%;
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 900px){
+
+/* aside */
+
+  aside {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+  }
+}
