@@ -23,12 +23,15 @@ const downloadButton = document.getElementById("download-button");
 const loadingMeme = document.getElementById("loading-meme");
 
 downloadButton.onclick = () => {
-loadingMeme.style.display = "block";
-domtoimage.toBlob(downloadMeme)
-.then(function (blob) {
-    window.saveAs(blob, 'Your_Meme.png');
-    loadingMeme.style.display = "none";
-})
+    loadingMeme.style.display = "block";
+    domtoimage.toBlob(downloadMeme)
+    .then((blob) => {
+        window.saveAs(blob, 'Your_Meme.png');
+        loadingMeme.style.display = "none";
+    })
+    .catch(() => {
+        loadingMeme.style.display = "none";
+    })
 }
 
 // form  text/image button display none/block
@@ -371,19 +374,20 @@ txt2.style.textShadow = "2px 2px 2px #000000"
 
 // button espaciado
 
-/* const inputNumberSpacing = document.getElementById("number-spacing")
+const inputNumberSpacing = document.getElementById("number-spacing");
 
 inputNumberSpacing.oninput = () =>{
-    
-} */
+    txt1.style.height = `${inputNumberSpacing.value * 2}px`;
+    txt1.style.marginBottom = `-${inputNumberSpacing.value * 2}px`;
+    txt2.style.height = `${inputNumberSpacing.value * 2}px`;
+    txt2.style.marginTop = `-${inputNumberSpacing.value * 2}px`;
+}
 
-// select line spacing
+//select line spacing
 
-//const inputSelectLineSpacing = document.getElementById("select-font")
-//console.log(inputSelectLineSpacing)
+const inputSelectLineSpacing = document.getElementById("line-spacing");
 
-// inputSelectLineSpacing.addEventListener( 'change', () =>{
-//     txt1.style.lineHeight = inputSelectLineSpacing.value
-//     txt2.style.lineHeight = inputSelectLineSpacing.value
-// }
-// )
+inputSelectLineSpacing.oninput = () => {
+    txt1.style.lineHeight = inputSelectLineSpacing.value;
+    txt2.style.lineHeight = inputSelectLineSpacing.value;
+}

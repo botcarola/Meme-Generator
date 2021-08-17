@@ -68,7 +68,7 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
             <div class="main-container" id="download-container">
                 <div class="main-top" id="txt1">TOP TEXT</div>
                 <div class="main-center" id="main-center">
-                    <img class="image-container" src="image/defaultMeme.png" id="image-container">
+                    <img class="image-container" src="images/defaultMeme.png" id="image-container">
                 </div>
                 <div class="main-bottom" id="txt2">BOTTOM TEXT</div>
             </div>
@@ -77,7 +77,7 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
                 Download meme
             </button>
         </div>        
-        <span id="loading-meme">⌛</span>
+        <span id="loading-meme" class="flip-horizontal-bottom">⌛</span>
     </div>
     
 </main>
@@ -147,7 +147,7 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
 
             <!-- form button reset -->
 
-            <button class="button-restored change-color">Reset Filters</button>
+            <button type="button" class="button-restored change-color">Reset Filters</button>
         </form>
     </div>
 
@@ -170,8 +170,7 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
             <h2>TEXT</h2>
             <h3>SUPERIOR</h3>
             <label>
-                <textarea class="fontbox change-color" value="TOP TEXT" id="toptxt">
-                </textarea>
+                <textarea class="fontbox change-color" value="TOP TEXT" id="toptxt">TOP TEXT</textarea>
             </label>
             <div>
                 <input type="checkbox" id="top-check">
@@ -179,8 +178,7 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
             </div>
             <h3>INFERIOR</h3>
             <label>
-                <textarea class="fontbox change-color" value="BOTTOM TEXT" id="btmtxt">
-                </textarea>
+                <textarea class="fontbox change-color" value="BOTTOM TEXT" id="btmtxt">BOTTOM TEXT</textarea>
             </label>
             <div>
                 <input type="checkbox" id="btm-check">
@@ -242,13 +240,13 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
             </div>
             <h3>SPACING</h3>
             <label>
-                <input id="number-spacing" type="number" class="spacing-number change-color" value="35" min="10" max="50"> 
+                <input id="number-spacing" type="number" class="spacing-number change-color" value="50" min="15" max="100"> 
             </label>
             <h3>LINE SPACING</h3>
             <label>
-                <select id="select-font" class="select-font change-color">
+                <select id="line-spacing" class="select-font change-color">
                     <option value="0.8">0.8</option>
-                    <option value="1.0">1.0</option>
+                    <option value="1.0" selected>1.0</option>
                     <option value="1.2">1.2</option>
                     <option value="1.5">1.5</option>
                     <option value="2.0">2.0</option>
