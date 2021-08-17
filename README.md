@@ -35,7 +35,7 @@
         
 </ul>
 
-<p>💜 Lo hicimos en conjunto, sumando todos nuestros conocimientos aprendidos. Cada compañera trabajando en una o varias branches, para finalmente, sumar todas las ramas y formar el proyecto finalizado!</p>
+<p>💜 Lo hicimos en conjunto, sumando todos nuestros conocimientos aprendidos. Cada compañera trabajando en una o varias branches. Incluyendo llamadas grupales, para corregir y trabajar en conjunto, solucionando problemas, compartiendo otras maneras de hacer el código. Y finalmente, sumar todas las ramas y formar el proyecto finalizado!</p>
 
 &nbsp;
 
