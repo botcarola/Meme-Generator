@@ -4,7 +4,9 @@
 
 body {
   margin: 0;
+  /* innecesario */
   padding: 0;
+  /* innecesario */
   color: #fff;
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -98,6 +100,7 @@ body {
 /* header */
 
 header {
+  /* innecesario */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -118,6 +121,7 @@ header {
 /* nav */
 
 nav {
+  /* innecesario */
   width: 100%;
   height: 50px;
 }
@@ -125,6 +129,7 @@ nav {
 .nav-list {
   list-style: none;
   display: flex;
+  /* innecesario */
   flex-direction: row;
   justify-content: center;
   padding-left: 0;
@@ -147,6 +152,7 @@ nav {
 /* main */
 
 main {
+  /* innecesario */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -176,6 +182,7 @@ main {
   color: #000;
   background-color: white;
   min-height: 100px;
+  /* innecesario */
   width: 100%;
   margin-bottom: -100px;
   display: flex;
@@ -183,6 +190,7 @@ main {
   align-items: center;
   font-size: 30px;
   font-weight: 900;
+  /* privilegien usar numeros mas pequeños en z index. Lo que va mas abajo es 1, lo de arriba 2.  */
   z-index: 1000;
   line-height: 1;
 }
@@ -191,6 +199,7 @@ main {
   color: #000;
   background-color: white;
   min-height: 100px;
+  /* innecesario */
   width: 100%;
   margin-top: -100px;
   display: flex;
@@ -204,6 +213,7 @@ main {
 
 .main-center {
   height: 100%;
+/* innecesario */
   width: 100%;
   background-color: #000;
   text-align: center;
@@ -310,6 +320,7 @@ aside {
 
 h2 {
   text-align: center;
+  /* No es necesario ya que el body tiene la font Roboto, y esta se hereda*/
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -317,6 +328,7 @@ h2 {
 }
 
 h3 {
+  /* No es necesario ya que el body tiene la font Roboto */
   font-family: "Roboto", sans-serif;
   font-size: 13px;
   font-weight: 600;
@@ -325,6 +337,7 @@ h3 {
 }
 
 label {
+  /* No es necesario ya que el body tiene la font Roboto */
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   padding-top: 10px;
@@ -332,6 +345,7 @@ label {
 }
 
 .label-url {
+  /* Innecesario */
   margin: 0;
   padding: 0;
 }
@@ -389,6 +403,9 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .color-and-select span {
+  /* Detalle, pero es mas eficiente a nivel recursos del navegador escribir todo en mayuscula en HTML
+  que transformarlo con CSS. Esto lo usamos cuando no tenemos control sobre el texto que vendra 
+  (por ejemplo cuando pedimos datos del backend) */
   text-transform: uppercase;
 }
 
@@ -461,6 +478,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 38px;
   background-color: #30343f;
   color: white;
+  /* Innecesario */
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   border: 1px solid #30343f;
