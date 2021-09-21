@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!-- La pagina esta en ingles, pero el lenguaje del documento en español. Un lector de pantalla trataria de 
+leerla en español (va a leer "dounload meme") y buscadores como google van a recomendar esta web a 
+hispanohablantes. El lang del documento debe coincidir con el lenguaje que usan los usuarios de esta pagina.  -->
 <html lang="es">
 
 <head>
@@ -17,6 +20,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
 integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<!-- No es necesario repetir estos links de google fonts: con uno alcanza. Los que si se necesitan son los de cada 
+font en particular. Repetirlos impacta negativamente en el tiempo de carga de la pagina. 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
@@ -33,6 +42,8 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
 
     <!-- main -->
 
+    <!-- Main corresponde a la seccion principal. El header no forma parte de esto. 
+    Es una seccion accesoria, junto con el aside -->
     <main id="main">
 
         <!-- header  -->
@@ -55,6 +66,9 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
                     </li>
                     <li class="nav-list-container">
                         <button class="button-mode button-image">
+                            <!-- Este emoji aca es el que causa que este boton se vea desalineado con respecto a los demas
+                            Al ser mas grande que los <i> que usan en los demas botones. 
+                            Una solucion rapida seria: o usar emojis en todos, o usar <i> en todos.  -->
                             🌞 Light mode
                         </button>
                     </li>
@@ -66,6 +80,7 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
 
         <div class="download-container">
             <div class="main-container" id="download-container">
+                <!-- "top text" es un nombre mas descriptivo que txt1 -->
                 <div class="main-top" id="txt1">TOP TEXT</div>
                 <div class="main-center" id="main-center">
                     <img class="image-container" src="images/defaultMeme.png" id="image-container">
@@ -76,7 +91,8 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
                 <i class="fas fa-download button-icon-text"></i>
                 Download meme
             </button>
-        </div>        
+        </div>  
+        <!-- Esto me parece una genial idea, pero no veo que funcione. Podemos verlo juntas?       -->
         <span id="loading-meme" class="flip-horizontal-bottom">⌛</span>
     </div>
     

@@ -4,6 +4,18 @@ const darkMode = document.querySelector(".dark-mode")
 const buttonMode = document.querySelector(".button-mode")
 const lightMode = document.querySelector(".light-mode")
 
+// atencion al tabulado aqui. Todo lo que va dentro de llaves lleva margen. Asi:
+// buttonMode.onclick = () => {
+//     darkMode.classList.toggle("dark-mode")
+//     darkMode.classList.toggle("light-mode")
+    
+//     if (darkMode.classList.contains("dark-mode")) {
+//         buttonMode.textContent = "🌞 Light mode"
+//     }
+//     else {
+//         buttonMode.textContent = "🌙 Dark mode"
+//     }
+// }
 buttonMode.onclick = () => {
 darkMode.classList.toggle("dark-mode")
 darkMode.classList.toggle("light-mode")
@@ -35,13 +47,21 @@ downloadButton.onclick = () => {
 }
 
 // form  text/image button display none/block
+// Los nombres de los botones no son muy claros, a primera vista es dificil ver cual es 
+// el del panel de desktop y cual es el de mobile. 
 
 const asideImage = document.getElementById("aside-image")
 const asideText = document.getElementById("aside-text")
 const buttonImage = document.getElementById("button-image")
 const buttonText = document.getElementById("button-text")
 
+// Como estas dos funciones no se reutilizaran en ningun lado, mejor asignarlas derecho al onclick:
+// buttonImage.onclick = () => {
+//     asideImage.style.display = "block"
+//     asideText.style.display = "none"
+// }
 
+// atencion al tabulado
 const openAsideImage = () => {
 asideImage.style.display = "block"
 asideText.style.display = "none"
@@ -85,6 +105,7 @@ const inputColor = document.getElementById("input-color");
 const colorHex = document.getElementById("color-hex");
 
 inputColor.oninput = () => {
+    // los parentesis son innecesarios aqui. Atencion al tabulado. 
 mainCenter.style.backgroundColor = (inputColor.value)
 colorHex.textContent = (inputColor.value)
 }
@@ -94,6 +115,21 @@ colorHex.textContent = (inputColor.value)
 const mixBlend = document.getElementById("mix-blend"); //id de select 
 
 mixBlend.onchange = () => {
+// // atencion al tabulado
+// Podriamos hacer esta funcion mas eficiente si los valores de mixBlend fueran ya lo que necesitamos. 
+// O sea , en nuestro HTML escribimos:
+/* <option value="ninguno" selected>None</option>
+<option value="lighten">Bright</option>
+<option value="darken">Darken</option>
+<option value="difference">Difference</option>
+<option value="luminosity">Luminosity</option>
+<option value="multiply">Multiply</option> */
+// Y eso nos permite que nuestra funcion quede super breve:
+
+// mixBlend.onchange = () => {
+//     imageContainer.style.mixBlendMode = mixBlend.value
+// }
+
 
 if (mixBlend.value === "aclarar") {
 imageContainer.style.mixBlendMode = "lighten"
@@ -116,6 +152,7 @@ imageContainer.style.mixBlendMode = ""
 }
 
 // Filter 
+// que bien que resolvieron esto! amé la funcion!!!
 
 let brightnessFilter = 1;
 let opacityFilter = 1;
@@ -197,6 +234,7 @@ const btmtxt = document.getElementById("btmtxt");
 const txt1 = document.getElementById("txt1");
 const txt2 = document.getElementById("txt2");
 
+// atencion al tabulado
 toptxt.addEventListener("keyup", () => {
 txt1.innerHTML = toptxt.value;
 });
@@ -231,6 +269,27 @@ if (btmCheck.checked) {
 const optionFont = document.getElementById("optionfont")
 
 optionFont.addEventListener('change', () =>{
+    // Esta funcion no esta mal, todo lo contrario! Lo resolvieron super bien.
+    // Pero quiero comentarles que si le hubieran dado el "value" al select
+    // con el nombre final de la tipografia, habria sido mucho mas sencillo. 
+    // Por ejemplo, en el select escribimos:
+
+    // <option value="Arial, Helvetica, sans-serif">Arial</option>
+    // <option value="Montserrat">Montserrat</option>
+    // <option value="American Typewriter">American Typewriter</option>
+    // <option value="monospace">Monospace</option>
+    // <option value="Comic Sans MS" selected>Comic Sans MS</option>
+    // <option value="Comic Neue">Comic Neue</option>
+    // <option value="Impact">Impact</option>
+    // <option value="Verdana">Verdana</option>
+    // <option value="DotGothic16">Dot Gothic</option>   
+    
+    // y con ese cambio en html, ahora nuestra funcion puede ser asi de sencilla:
+// optionFont.addEventListener('change', () =>{
+//     txt1.style.fontFamily = optionFont.value
+//     txt2.style.fontFamily = optionFont.value
+// }
+
 if ( optionFont.value === "Arial"){
     txt1.style.fontFamily = "Arial, Helvetica, sans-serif"
     txt2.style.fontFamily = "Arial, Helvetica, sans-serif"
@@ -272,7 +331,7 @@ else if (optionFont.value === "DGothic" ) {
 // tamaño de fuente
 
 const inputNumberFont = document.getElementById("number")
-
+// dejen un espacio entre la flecha y la llave: => {
 inputNumberFont.oninput = () =>{
     txt1.style.fontSize = `${inputNumberFont.value}px` 
     txt2.style.fontSize = `${inputNumberFont.value}px`
@@ -329,6 +388,17 @@ mainCenter.style.backgroundColor = backgroundColor.value
 const inputCheckTransparent = document.getElementById("check-transparent")
 inputCheckTransparent.addEventListener('change', () =>{
 
+    // ojo con el tabulado
+    // no es necesario hacer comparaciones contra true o false. 
+    // esto es lo mismo:
+    // if (inputCheckTransparent.checked) {
+    //     txt1.style.backgroundColor = backgroundColor.value
+    //     txt2.style.backgroundColor = backgroundColor.value
+    // } 
+    // else {
+    //     txt1.style.backgroundColor = inputBackgroundColorText.value
+    //     txt2.style.backgroundColor = inputBackgroundColorText.value
+    // }
 if ( inputCheckTransparent.checked == true ){
 txt1.style.backgroundColor = backgroundColor.value
 txt2.style.backgroundColor = backgroundColor.value
@@ -340,7 +410,7 @@ txt2.style.backgroundColor = inputBackgroundColorText.value
 })
 
 inputCheckTransparent.addEventListener('change', () =>{
-
+// misma observacion que antes sobre comparaciones con booleanos
 if ( inputCheckTransparent.checked == true ){
 txt1.style.backgroundColor = "transparent"   
 txt2.style.backgroundColor = "transparent"     
